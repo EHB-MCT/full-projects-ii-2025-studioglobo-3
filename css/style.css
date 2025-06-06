@@ -1,1 +1,29 @@
+body {
+	font-family: "evolver-variable", sans-serif;
+	font-variation-settings: "wght" 400, "slnt" 1;
 
+	color: #000000;
+}
+h1 {
+	font-size: 54pt;
+}
+h2 {
+	font-size: 32pt;
+}
+h3 {
+	font-size: 16pt;
+}
+
+p {
+	font-size: 12pt;
+}
+
+a {
+	size: 16pt;
+	font-family: ocr-a-std, monospace;
+	color: #2200cc;
+}
+blockquote {
+	font-size: 54pt;
+	color: #fb5d00;
+}
