@@ -1,35 +1,62 @@
 <!DOCTYPE html>
 
 <head>
-	<link href="css/reset.css" rel="stylesheet" />
-	<link href="css/style.css" rel="stylesheet" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="images/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="images/favicon-16x16.png"
+  />
+  <title>Saved by the bell</title>
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link href="css/reset.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/structure.css" rel="stylesheet" />
+  
 </head>
 <body>
-	<h1>Heading 1</h1>
-	<div class="border_one">
-		<h2>Heading 2</h2>
-	</div>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo sbtb.png" alt="Logo Saved by the bell"
+      /></a>
+    </div>
 
-	<p>
-		Lorem ipsum dolor sit amet <a href="#">link</a> consectetur adipisicing
-		elit. Quisquam quibusdam, voluptatum, quod, quia voluptatem voluptas quos
-		asperiores, voluptate quae quas doloribus. Quisquam quibusdam, voluptatum,
-		quod, quia voluptatem voluptas quos asperiores, voluptate quae quas
-		doloribus.
-	</p>
+    <input type="checkbox" id="hamburger-toggle" />
+    <label for="hamburger-toggle" class="hamburger-icon">
+      <span></span><span></span><span></span>
+    </label>
 
-	<ul>
-		<li>List item</li>
-		<li>List item</li>
-	</ul>
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">Over</a></li>
+        <li><a href="pages/materiaal.html">Materiaal</a></li>
+        <li><a href="pages/deelnemen.html">Deelnemen</a></li>
+        <div class="dropdown">
+          <button class="dropbtn">Samenwerking</button>
+          <div class="dropdown-content">
+            <li><a href="pages/parterschool"></a></li>
+            <li><a href="pages/activiteiten"></a></li>
+          </div>
+        </div>
+        <li><a href="pages/materiaal.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-	<a href="#" class="btn-primary"
-		><img src="images/button.svg" /> <span>Primary</span></a
-	>
-	<a href="#" class="btn-secondary"
-		>button logo
-		<img src="" />
-	</a>
+  
 
-	<script src="js/index.js"></script>
+  <script src="js/index.js"></script>
 </body>
