@@ -44,8 +44,7 @@ blockquote {
 ul li {
 	font-size: 12pt;
 	margin-left: 15px;
-
-	list-style: disc;
+	list-style: none;
 }
 tr {
 	font-family: "arvo", serif;

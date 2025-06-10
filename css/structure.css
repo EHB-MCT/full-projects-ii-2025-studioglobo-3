@@ -36,10 +36,10 @@
   gap:40px;
   margin:0;
   padding:0;
+  float: right;
 }
 
 .navigation li a {
-  text-decoration:none;
   position:relative;
 }
 
@@ -67,7 +67,6 @@
 
 .dropdown-content a {
   padding: 12px 16px;
-  text-decoration: none;
   display: block;
 }
 
