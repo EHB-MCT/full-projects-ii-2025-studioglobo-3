@@ -50,9 +50,19 @@ button:hover {
 }
 .home {
 	grid-column: 1/7;
-	background-color: #ffc52c;
 }
 .home-text {
 	grid-column: 7/13;
-	background-color: green;
+}
+.cta-text {
+	grid-column: 1/5;
+}
+.cta-img {
+	grid-column: 7/13;
+}
+.quote-img {
+	grid-column: 1/7;
+}
+.quote-text {
+	grid-column: 7/13;
 }
