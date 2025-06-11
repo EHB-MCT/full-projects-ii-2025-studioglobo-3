@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,700;1,700&family=Luckiest+Guy&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=EB+Garamond:ital,wght@0,700;1,700&family=Luckiest+Guy&display=swap");
+
+h1 {
+	font-family: "luckiest guy", sans-serif;
+	font-size: 54pt;
+}
+h2 {
+	font-size: 32pt;
+	font-family: "arvo", serif;
+}
+h3 {
+	font-size: 16pt;
+	font-family: "arvo", serif;
+}
+
+p {
+	font-size: 12pt;
+}
+
+a {
+	size: 16pt;
+	font-family: Arial;
+	color: #2200cc;
+}
+blockquote {
+	font-size: 54pt;
+	color: #fb5d00;
+	font-family: "arvo", serif;
+	font-style: italic;
+	font-weight: bold;
+}
+ul li {
+	font-size: 12pt;
+	margin-left: 15px;
+	list-style: none;
+}
+tr {
+	font-family: "arvo", serif;
+	font-weight: bold;
+	font-size: 32pt;
+}

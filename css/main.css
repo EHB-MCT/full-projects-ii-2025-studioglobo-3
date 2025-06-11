@@ -1,0 +1,140 @@
+@import "reset.css";
+@import "global.css";
+@import "typography.css";
+/* navigation.css */
+
+/* ======================
+   1) Desktop-first basis
+   ====================== */
+
+body {
+  margin: 0;
+}
+
+/* Links standaard zichtbaar op desktop */
+a {
+  font-family: Arial, sans-serif;
+  font-size: 16pt;
+  color: #2200cc;
+  text-decoration: none;
+}
+
+/* Header als flex-container */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem 2rem;
+  background: #F8BBDE;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: visible;
+}
+
+/* Logo */
+.logo img {
+  height: 40px;
+}
+
+/* Hamburger standaard verbergen */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Nav standaard zichtbaar op desktop */
+nav {
+  display: block;
+}
+
+/* Desktop: horizontale lijst */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Dropdown parent */
+.dropdown-toggle {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown-toggle::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Dropdown-menu hidden until hover */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fafafa;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav li:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Button styling blijft globaal of in buttons.css */
+button {
+  font-family: "arvo", serif;
+  background-color: #ffc52c;
+  box-shadow: -3px 3px 0 0px #686868;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #fff;
+  box-shadow: -3px 3px 0 0px #ffc52c;
+}
+
+/* ======================
+   2) Mobiel (<480px)
+   ====================== */
+@media (max-width: 479px) {
+  /* Hamburger tonen */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Nav standaard verbergen totdat .open */
+  nav {
+    display: none;
+  }
+  nav.open {
+    display: block;
+  }
+
+  /* Verticale lijst op mobiel */
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Dropdown-menu inline tonen wanneer .open */
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    display: none;
+    background: #fafafa;
+  }
+  .dropdown-menu.open {
+    display: block;
+  }
+}

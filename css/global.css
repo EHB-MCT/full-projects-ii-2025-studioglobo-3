@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+	font-variation-settings: "wght" 400, "slnt" 1;
+	font-family: "ariel", sans-serif;
+	color: #000000;
+}
+button {
+	font-family: "arvo", serif;
+	background-color: #ffc52c;
+	box-shadow: -3px 3px 0 0px #686868;
+	color: #000000;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 100px;
+	height: 45px;
+	transition: 0.3s;
+}
+
+button:hover {
+	background-color: #ffffff;
+	box-shadow: -3 3 0 0px #ffc52c;
+	color: #000000;
+}
