@@ -27,15 +27,32 @@ button:hover {
 	color: #000000;
 }
 .wrapper {
-	width: 1200px;
-	margin: 0;
+	margin-left: 64pt;
+	margin-right: 64pt;
+	display: grid;
+	align-items: center;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(10, minmax(50px, auto));
+	position: relative;
+}
 
-	display: flex;
+#grid {
+	position: absolute;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	width: 100%;
+	height: 100%;
+}
+#grid p {
+	border: 1px solid #000;
+	margin-left: 0;
+	opacity: 0.2;
 }
 .home {
-	flex: 1;
+	grid-column: 1/7;
+	background-color: #ffc52c;
 }
-.home-tekst {
-	margin-top: 100px;
-	flex: 1;
+.home-text {
+	grid-column: 7/13;
+	background-color: green;
 }

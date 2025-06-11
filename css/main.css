@@ -8,70 +8,70 @@
    ====================== */
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 a {
-  font-family: Arial, sans-serif;
-  font-size: 16pt;
-  color: #2200cc;
-  text-decoration: none;
+	font-family: Arial, sans-serif;
+	font-size: 16pt;
+	color: #2200cc;
+	text-decoration: none;
 }
 
 /* Button styling blijft globaal of in buttons.css */
 button {
-  font-family: "arvo", serif;
-  background-color: #ffc52c;
-  box-shadow: -3px 3px 0 0px #686868;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  width: 100px;
-  height: 45px;
-  transition: 0.3s;
+	font-family: "arvo", serif;
+	background-color: #ffc52c;
+	box-shadow: -3px 3px 0 0px #686868;
+	color: #000;
+	border: none;
+	cursor: pointer;
+	border-radius: 8px;
+	width: 100px;
+	height: 45px;
+	transition: 0.3s;
 }
 button:hover {
-  background-color: #fff;
-  box-shadow: -3px 3px 0 0px #ffc52c;
+	background-color: #fff;
+	box-shadow: -3px 3px 0 0px #ffc52c;
 }
 
 /* ======================
    2) Mobiel (<480px)
    ====================== */
 @media (max-width: 480px) {
-  /* Hamburger tonen */
-  .nav-toggle {
-    display: block;
-  }
+	/* Hamburger tonen */
+	.nav-toggle {
+		display: block;
+	}
 
-  /* Nav standaard verbergen totdat .open */
-  nav {
-    display: none;
-  }
-  nav.open {
-    display: block;
-  }
+	/* Nav standaard verbergen totdat .open */
+	nav {
+		display: none;
+	}
+	nav.open {
+		display: block;
+	}
 
-  /* Verticale lijst op mobiel */
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+	/* Verticale lijst op mobiel */
+	nav ul {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
 
-  /* Dropdown-menu inline tonen wanneer .open */
-  .dropdown-menu {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-  }
-  nav li.has-dropdown:hover > .dropdown-menu {
-    display: block; /* of altijd block, en alleen visibility/opacity togglen */
-    visibility: visible;
-    opacity: 1;
-  }
+	/* Dropdown-menu inline tonen wanneer .open */
+	.dropdown-menu {
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+	}
+	nav li.has-dropdown:hover > .dropdown-menu {
+		display: block; /* of altijd block, en alleen visibility/opacity togglen */
+		visibility: visible;
+		opacity: 1;
+	}
 
-  .dropdown-menu.open {
-    display: block;
-  }
+	.dropdown-menu.open {
+		display: block;
+	}
 }
