@@ -39,7 +39,7 @@ button:hover {
 /* ======================
    2) Mobiel (<480px)
    ====================== */
-@media (max-width: 479px) {
+@media (max-width: 480px) {
   /* Hamburger tonen */
   .nav-toggle {
     display: block;
@@ -61,11 +61,16 @@ button:hover {
 
   /* Dropdown-menu inline tonen wanneer .open */
   .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    display: none;
-    background: #fafafa;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
   }
+  nav li.has-dropdown:hover > .dropdown-menu {
+    display: block; /* of altijd block, en alleen visibility/opacity togglen */
+    visibility: visible;
+    opacity: 1;
+  }
+
   .dropdown-menu.open {
     display: block;
   }

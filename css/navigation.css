@@ -1,22 +1,22 @@
 header {
   display: flex;
-  height: 70px;
+  height: 100px;
   align-items: center;
   justify-content: space-between;
   position: relative;
   padding: 1rem 2rem;
-  background: #F8BBDE;
+  background: #F1BFBE;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   overflow: visible;
 }
 
-/* Logo */
 .logo img {
-  height: 40px;
+  height: auto;
+  width: 100%;
+  max-width: 60px;
 }
 
-/* Hamburger standaard verbergen */
 .nav-toggle {
   display: none;
   background: none;
@@ -24,12 +24,10 @@ header {
   font-size: 1.5rem;
 }
 
-/* Nav standaard zichtbaar op desktop */
 nav {
   display: block;
 }
 
-/* Desktop: horizontale lijst */
 nav ul {
   list-style: none;
   margin: 0;
@@ -39,11 +37,19 @@ nav ul {
   gap: 2rem;
 }
 
-/* Dropdown parent */
+nav ul li {
+  position: relative;
+}
+
+.nav-item:hover {
+    background-color: #fff;
+}
+
 .dropdown-toggle {
   position: relative;
   cursor: pointer;
 }
+
 .dropdown-toggle::after {
   content: "▾";
   position: absolute;
@@ -52,7 +58,6 @@ nav ul {
   transform: translateY(-50%);
 }
 
-/* Dropdown-menu hidden until hover */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -61,16 +66,43 @@ nav ul {
   background: #fafafa;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 nav li:hover > .dropdown-menu {
   display: block;
 }
 
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    display: none;
-    background: transparent;
-  }
-  .dropdown-menu.open {
-    display: block;
-  }
+.dropdown-menu {
+  position: static;
+  box-shadow: none;
+  display: none;
+  background: transparent;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  z-index: 100;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 14pt;
+  color: #2200cc;
+}
