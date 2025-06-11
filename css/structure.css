@@ -10,21 +10,12 @@ a {
 }
 
 header {
+  display: flex;
   position: relative;
   padding: 1rem;
   background: #F8BBDE;
-
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-
-  clip-path: polygon(
-    0   0,
-    100% 0,
-    100% 90%,
-    0   100%
-  );
-
-  overflow: hidden;
 }
 
 .logo img {
