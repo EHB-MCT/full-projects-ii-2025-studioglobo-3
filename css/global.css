@@ -1,11 +1,12 @@
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
 	font-variation-settings: "wght" 400, "slnt" 1;
 	font-family: "ariel", sans-serif;
 	color: #000000;
+	background-color: #faf9f6;
 }
 button {
 	font-family: "arvo", serif;
@@ -24,4 +25,17 @@ button:hover {
 	background-color: #ffffff;
 	box-shadow: -3 3 0 0px #ffc52c;
 	color: #000000;
+}
+.wrapper {
+	width: 1200px;
+	margin: 0;
+
+	display: flex;
+}
+.home {
+	flex: 1;
+}
+.home-tekst {
+	margin-top: 100px;
+	flex: 1;
 }
