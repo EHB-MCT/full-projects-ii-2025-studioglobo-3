@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<html lang="nl">
 <head>
   <link
     rel="apple-touch-icon"
@@ -18,7 +18,10 @@
     sizes="16x16"
     href="images/favicon-16x16.png"
   />
-  <title>Saved by the bell</title>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saved by the Bell</title>
   <link rel="manifest" href="images/site.webmanifest" />
   <link href="css/reset.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
@@ -26,37 +29,47 @@
   
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo sbtb.png" alt="Logo Saved by the bell"
-      /></a>
-    </div>
-
-    <input type="checkbox" id="hamburger-toggle" />
-    <label for="hamburger-toggle" class="hamburger-icon">
-      <span></span><span></span><span></span>
-    </label>
-
-    <nav class="navigation">
+<header>
+    <a href="#" class="logo">
+      <img src="images/logo sbtb.png" alt="Saved by the bell logo">
+    </a>
+    <button class="nav-toggle" aria-label="Open menu">☰</button>
+    <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="pages/about.html">Over</a></li>
-        <li><a href="pages/materiaal.html">Materiaal</a></li>
-        <li><a href="pages/deelnemen.html">Deelnemen</a></li>
-        <div class="dropdown">
-          <button class="dropbtn">Samenwerking</button>
-          <div class="dropdown-content">
-            <li><a href="pages/parterschool">Hoe samenwerken</a></li>
-            <li><a href="pages/activiteiten">Activiteiten</a></li>
-          </div>
-        </div>
-        <li><a href="pages/materiaal.html">Contact</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Over ons</a></li>
+        <li><a href="#">Materiaal</a></li>
+        <li><a href="#">Deelnemen</a></li>
+        <li>
+          <span class="dropdown-toggle" tabindex="0">Samenwerking</span>
+          <ul class="dropdown-menu">
+            <li><a href="#">Hoe samenwerken</a></li>
+            <li><a href="#">Activiteiten</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="graphic.svg" alt="Saved by the bell graphic" class="hero-graphic">
+      <div class="hero-text">
+        <h1>Vrijdag<br>3 oktober 2025</h1>
+        <p>internationale dag van de leerkracht: 5 oktober</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="cta">
+    <img src="kids.jpg" alt="Kinderen met bordje 'Goed gebeld!'">
+    <div>
+      <h2>Doe mee aan Saved by the bell:</h2>
+      <p>laat massaal de schoolbel klinken voor het recht op goed onderwijs voor iedereen!</p>
+      <a href="#" class="btn-primary">Deelnemen</a>
+    </div>
+  </section>
   <script src="js/index.js"></script>
 </body>
+</html>
