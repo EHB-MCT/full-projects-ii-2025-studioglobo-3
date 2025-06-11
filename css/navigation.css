@@ -11,6 +11,8 @@ header {
   overflow: visible;
 }
 
+
+
 /* Logo */
 .logo img {
   height: 40px;
@@ -74,3 +76,34 @@ nav li:hover > .dropdown-menu {
   .dropdown-menu.open {
     display: block;
   }
+
+
+  nav ul li {
+  position: relative;
+}
+
+/* 3) Het submenu uit de flow halen */
+.dropdown-menu {
+  display: none;                 /* standaard dicht */
+  position: absolute;            /* uit de normale flow */
+  top: 100%;                     /* direct onder de parent */
+  left: 50%;                     /* midden onder de parent */
+  transform: translateX(-50%);   /* echt centreren */
+  white-space: nowrap;           /* niet wrappen */
+  background: #fff;              
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  z-index: 100;                  /* altijd boven de header */
+}
+
+/* submenu items */
+.dropdown-menu li {
+  margin: 0;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 14pt;            /* naar wens aanpassen */
+  color: #2200cc;
+}
