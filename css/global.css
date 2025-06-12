@@ -68,6 +68,12 @@ button:hover {
 	padding: 40px;
 	border-radius: 10px;
 }
+.home-text h1 {
+	line-height: 100px;
+}
+.home-text p {
+	line-height: 30px;
+}
 
 .cta-text {
 	grid-column: 2/7;
@@ -100,7 +106,7 @@ button:hover {
 
 .quote-text {
 	grid-column: 6/12;
-	grid-row: 9/10;
+	grid-row: 8/10;
 }
 .quote-text h2 {
 	line-height: 90px;
