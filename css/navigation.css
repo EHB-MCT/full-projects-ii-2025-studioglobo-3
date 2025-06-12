@@ -1,15 +1,24 @@
 header {
-  display: flex;
+  position: relative;
+  overflow: hidden;
   height: 100px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   padding: 1rem 2rem;
-  background: #F1BFBE;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  overflow: visible;
 }
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;                         
+  background: #F1BFBE;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  z-index: -1;
+}
+
 
 .logo img {
   height: auto;
@@ -29,14 +38,28 @@ nav {
 }
 
 
-
 nav ul {
   display: flex;
-  gap: 2rem;
   align-items: center;
+  justify-content: flex-end;
+  gap: 3rem;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.nav-item {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  color: #000;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-item:hover {
+  background: rgba(0,0,0,0.05);
 }
 
 
@@ -44,9 +67,7 @@ nav ul li {
   position: relative;
 }
 
-.nav-item:hover {
-  background-color: #ba8b8a;
-}
+
 
 .dropdown-toggle {
   cursor: pointer;
@@ -67,12 +88,7 @@ nav ul li {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.nav-item {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;  
-  transition: background 0.2s;
-}
+
 
 
 nav li:hover > .dropdown-menu {
