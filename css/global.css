@@ -110,10 +110,21 @@ button:hover {
 	position: relative;
 	align-items: center;
 }
-.nieuws h1 {
-	grid-column: 6/7;
+
+.nieuwsblok {
+  padding: 50px;
+  padding-left: 73px;
+  background-image: url(../images/nieuwsblok.svg);
+  background-repeat: no-repeat;
+  text-align: center;
+
+  background-size: cover;
+  background-position: bottom right;
+  grid-column: 6/7;
 	grid-row: 3/3;
 }
+
+
 .n1-img {
 	grid-column: 2/6;
 	grid-row: 6/7;
