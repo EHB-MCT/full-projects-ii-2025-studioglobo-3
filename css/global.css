@@ -105,7 +105,7 @@ button:hover {
 	margin: 0 64px;
 
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(14, minmax(7 0px, auto));
+	grid-template-rows: repeat(14, minmax(70px, auto));
 
 	position: relative;
 	align-items: center;
