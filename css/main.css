@@ -10,7 +10,6 @@ body {
 @media (max-width: 480px) {
   header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -51,7 +50,9 @@ body {
   }
 
   .wrapper,
-  .nieuws {
+  .nieuws,
+  .wrapper-2,
+  .wrapper-3 {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -71,9 +72,27 @@ body {
   .n2-img,
   .n2-text,
   .n3-img,
-  .n3-text {
+  .n3-text,
+  .overblok,
+  .intro-img,
+  .intro-text,
+  .graph-text,
+  .graph-img,
+  .bell-img,
+  .bell-text,
+  .duurzaam-text,
+  .duurzaam-img,
+  .artikel,
+  .promo-text,
+  .promo-img,
+  .promo-img2,
+  .contactblok,
+  .contact-img,
+  .contact-text,
+  .contact-vorm {
     grid-column: 1 / -1;
     grid-row: auto;
+    text-align: center;
   }
 
   .home-text,
@@ -81,28 +100,26 @@ body {
   .quote-text,
   .n1-text,
   .n2-text,
-  .n3-text {
-    text-align: center;
+  .n3-text,
+  .intro-text,
+  .graph-text,
+  .bell-text,
+  .duurzaam-text,
+  .artikel,
+  .promo-text {
     padding: 1rem;
   }
 
-  .home-text h1,
-  .cta-text h2,
-  .quote-text h2,
-  .n1-text h2,
-  .n2-text h2,
-  .n3-text h2 {
+  h1,
+  h2 {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .cta-text p,
-  .quote-text p,
-  .n1-text p,
-  .n2-text p,
-  .n3-text p {
+  p {
     font-size: 1rem;
     line-height: 1.5rem;
+    padding: 0 1rem;
   }
 
   .btn-primary {
@@ -111,19 +128,9 @@ body {
     margin: 0 auto;
   }
 
-  .site-footer {
-    padding: 1rem;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 2rem;
-  }
-
-  .footer-org-logo {
-    max-width: 200px;
+  img {
+    width: 100%;
+    height: auto;
   }
 
   .kaart {
@@ -140,6 +147,86 @@ body {
   .subfilter-buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  .deelnemenblok.blok {
+    padding: 2rem 1rem;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .deelnemen-stats .stats-number {
+    font-size: 2.5rem;
+  }
+
+  .deelnemen-stats .stats-subtitle {
+    font-size: 1rem;
+  }
+
+  .deelnemen-map-search {
+    padding: 1rem;
+  }
+
+  .deelnemen-map-search .search-bar {
+    text-align: center;
+  }
+
+  .deelnemen-map-search .search-bar input {
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+  }
+
+  .deelnemen-form {
+    padding: 1rem;
+  }
+
+  .deelnemen-form h2 {
+    font-size: 1.4rem;
+  }
+
+  .deelnemen-form form {
+    gap: 1rem;
+  }
+
+  .deelnemen-form input,
+  .deelnemen-form textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .deelnemen-form button {
+    width: 100%;
+    max-width: 250px;
+    margin: 1rem auto 0;
+  }
+
+  .contact-text img {
+    max-width: 200px;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .contact-text a {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    word-break: break-word;
+  }
+
+  .site-footer {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .footer-org-logo {
+    max-width: 200px;
   }
 }
 
