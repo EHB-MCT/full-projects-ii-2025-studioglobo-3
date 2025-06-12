@@ -31,7 +31,7 @@ a {
 	font-family: "arvo", serif;
 }
 b {
-font-weight: bold;
+	font-weight: bold;
 }
 
 ul li {
@@ -42,4 +42,7 @@ ul li {
 tr {
 	font-weight: bold;
 	font-size: 32pt;
+}
+button {
+	font-size: 18pt;
 }
