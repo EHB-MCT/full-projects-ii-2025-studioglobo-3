@@ -46,16 +46,17 @@ nav ul li {
 }
 
 .dropdown-toggle {
+  display: flex;
   position: relative;
   cursor: pointer;
 }
 
-.dropdown-toggle::after {
-  content: "▾";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+#toggler:hover {
+display: flex;
+}
+
+#toggler {
+  display: flex;
 }
 
 .dropdown-menu {
