@@ -31,14 +31,14 @@ nav {
 
 
 nav ul {
+  display: flex;
+  gap: 2rem;
   align-items: center;
-  list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  list-style: none;
 }
+
 
 nav ul li {
   position: relative;
@@ -68,10 +68,11 @@ nav ul li {
 }
 
 .nav-item {
-    padding: 4px 8px;
-  border-radius: 5px;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;  
+  transition: background 0.2s;
 }
-
 
 
 nav li:hover > .dropdown-menu {
@@ -96,7 +97,7 @@ nav li:hover > .dropdown-menu {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  background: #fff;
+  background: #F1BFBE;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   border-radius: 4px;
   padding: 0.5rem 0;
