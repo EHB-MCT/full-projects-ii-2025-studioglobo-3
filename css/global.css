@@ -209,7 +209,7 @@ button:hover {
 }
 .intro-text {
 	grid-column: 7/12;
-	grid-row: 2/3;
+	grid-row: 3/3;
 }
 .graph-text {
 	grid-column: 2/7;
