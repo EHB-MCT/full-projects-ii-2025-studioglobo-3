@@ -71,11 +71,19 @@ button:hover {
 
 .cta-text {
 	grid-column: 2/7;
-	grid-row: 5/6;
+	grid-row: 5/9;
 }
+.cta-text h2 {
+	line-height: 90px;
+}
+.cta-text p {
+	line-height: 30px;
+	margin-bottom: 35px;
+}
+
 .cta-img {
 	grid-column: 6/12;
-	grid-row: 4/6;
+	grid-row: 5/6;
 }
 .cta-img img {
 	width: 100%;
@@ -91,6 +99,13 @@ button:hover {
 }
 
 .quote-text {
-	grid-column: 7/12;
+	grid-column: 6/12;
 	grid-row: 9/10;
+}
+.quote-text h2 {
+	line-height: 90px;
+}
+.quote-text p {
+	line-height: 30px;
+	margin-bottom: 35px;
 }
