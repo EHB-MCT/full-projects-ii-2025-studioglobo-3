@@ -42,13 +42,16 @@ body {
 
 
 .site-footer {
-  background: #82c9c0;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-  overflow: hidden;
   color: #000;
   font-family: arial, sans-serif;
+
+  background-image: url(../images/footer.svg);
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-position: top right;
 }
+
 
 .footer-content {
   display: flex;
@@ -110,8 +113,10 @@ body {
 
 .footer-social {
 	width: 30%;
+	margin-top: 30px;
 }
 
 .footer-org {
 	width: 70%;
+	margin-top: 30px;
 }
