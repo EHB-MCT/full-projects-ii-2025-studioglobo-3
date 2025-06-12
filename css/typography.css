@@ -30,6 +30,9 @@ a {
 	text-decoration: none;
 	font-family: "arvo", serif;
 }
+b {
+font-weight: bold;
+}
 
 ul li {
 	font-size: 12pt;
