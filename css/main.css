@@ -8,38 +8,140 @@ body {
 }
 
 @media (max-width: 480px) {
-	.nav-toggle {
-		display: block;
-	}
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
 
-	nav {
-		display: none;
-	}
-	nav.open {
-		display: block;
-	}
+  .logo img {
+    width: 100px;
+  }
 
-	nav ul {
-		flex-direction: column;
-		gap: 0.5rem;
-	}
+  nav {
+    display: none;
+    background-color: #f8bbbe;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    z-index: 1000;
+  }
 
-	.dropdown-menu {
-		visibility: hidden;
-		opacity: 0;
-		transition: opacity 0.2s ease;
-	}
-	nav li.has-dropdown:hover > .dropdown-menu {
-		display: block;
-		visibility: visible;
-		opacity: 1;
-	}
+  nav.open {
+    display: block;
+  }
 
-	.dropdown-menu.open {
-		display: block;
-	}
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+  }
+
+  .wrapper,
+  .nieuws {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    margin: 0 1rem;
+  }
+
+  .home,
+  .home-text,
+  .cta-text,
+  .cta-img,
+  .quote-img,
+  .quote-text,
+  .nieuwsblok,
+  .n1-img,
+  .n1-text,
+  .n2-img,
+  .n2-text,
+  .n3-img,
+  .n3-text {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .home-text,
+  .cta-text,
+  .quote-text,
+  .n1-text,
+  .n2-text,
+  .n3-text {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .home-text h1,
+  .cta-text h2,
+  .quote-text h2,
+  .n1-text h2,
+  .n2-text h2,
+  .n3-text h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .cta-text p,
+  .quote-text p,
+  .n1-text p,
+  .n2-text p,
+  .n3-text p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .site-footer {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .footer-org-logo {
+    max-width: 200px;
+  }
+
+  .kaart {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .kaart-afbeelding {
+    margin-bottom: 1rem;
+  }
+
+  .filter-buttons,
+  .subfilter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }
-
 
 .site-footer {
   color: #000;
