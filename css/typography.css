@@ -5,10 +5,12 @@ body {
 	font-family: "arvo", serif;
 }
 h1 {
-	font-size: 40pt;
+	font-size: 40px;
+	font-weight: bold;
 }
 h2 {
 	font-size: 25pt;
+	font-weight: bold;
 }
 h3 {
 	font-size: 18pt;

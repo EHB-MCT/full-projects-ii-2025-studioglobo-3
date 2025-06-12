@@ -11,29 +11,6 @@ body {
 	margin: 0;
 }
 
-
-
-/* Button styling blijft globaal of in buttons.css */
-button {
-	font-family: "arvo", serif;
-	background-color: #ffc52c;
-	box-shadow: -3px 3px 0 0px #686868;
-	color: #000;
-	border: none;
-	cursor: pointer;
-	border-radius: 8px;
-	width: 100px;
-	height: 45px;
-	transition: 0.3s;
-}
-button:hover {
-	background-color: #fff;
-	box-shadow: -3px 3px 0 0px #ffc52c;
-}
-
-/* ======================
-   2) Mobiel (<480px)
-   ====================== */
 @media (max-width: 480px) {
 	/* Hamburger tonen */
 	.nav-toggle {
