@@ -190,10 +190,14 @@ button:hover {
 	margin: 0 64px;
 
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(20, minmax(50px, auto));
+	grid-template-rows: repeat(25, minmax(50px, auto));
 
 	position: relative;
 	align-items: center;
+}
+.overblok {
+	text-align: center;
+	grid-column: 2/12;
 }
 .intro-img {
 	grid-column: 2/7;
@@ -266,4 +270,41 @@ button:hover {
 .duurzaam-text p {
 	line-height: 30px;
 	margin-bottom: 35px;
+}
+.artikel {
+	grid-row: 19/20;
+	grid-column: 2/12;
+	text-align: center;
+}
+.artikel h2 {
+	line-height: 30px;
+	margin-bottom: 35px;
+}
+.artikel p {
+	line-height: 30px;
+	margin-bottom: 35px;
+}
+.promo-text {
+	grid-row: 21/22;
+	grid-column: 2/9;
+}
+.promo-text p {
+	line-height: 30px;
+	margin-bottom: 35px;
+}
+.promo-img {
+	grid-row: 22/24;
+	grid-column: 2/12;
+}
+.promo-img img {
+	height: auto;
+	width: 100%;
+}
+.promo-img2 {
+	grid-row: 24/25;
+	grid-column: 3/11;
+}
+.promo-img2 img {
+	height: auto;
+	width: 100%;
 }
