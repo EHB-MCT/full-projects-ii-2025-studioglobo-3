@@ -24,8 +24,9 @@ nav ul li a .nav-item {
 }
 a {
 	size: 16pt;
-
-	color: #2200cc;
+	color: #000;
+	text-decoration: none;
+	font-family: "arvo", serif;
 }
 
 ul li {

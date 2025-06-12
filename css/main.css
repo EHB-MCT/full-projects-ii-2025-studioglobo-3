@@ -11,12 +11,7 @@ body {
 	margin: 0;
 }
 
-a {
-	font-family: Arial, sans-serif;
-	font-size: 16pt;
-	color: #2200cc;
-	text-decoration: none;
-}
+
 
 /* Button styling blijft globaal of in buttons.css */
 button {
