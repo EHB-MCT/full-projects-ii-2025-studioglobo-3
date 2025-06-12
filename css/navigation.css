@@ -42,20 +42,17 @@ nav ul li {
 }
 
 .nav-item:hover {
-    background-color: #fff;
+    background-color: #c7a4a3;
 }
 
 .dropdown-toggle {
+  display: flex;
   position: relative;
   cursor: pointer;
 }
 
-.dropdown-toggle::after {
-  content: "▾";
+#toggler:hover {
   position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .dropdown-menu {
