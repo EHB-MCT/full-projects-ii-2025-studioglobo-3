@@ -95,6 +95,11 @@ body {
     text-align: center;
   }
 
+.quote-text h2 {
+  line-height: 50px;
+}
+
+
   .home-text,
   .cta-text,
   .quote-text,
