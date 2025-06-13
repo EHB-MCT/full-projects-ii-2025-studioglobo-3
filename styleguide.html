@@ -1,96 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Styleguide</title>
-  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
-  <link href="./css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Styleguide</title>
+		<link href="./css/reset.css" rel="stylesheet" type="text/css" />
+		<link href="./css/styleguide.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<section>
+			<h1>Typography</h1>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
 
-  <section>
-    <h1>Typography</h1>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <h3>Heading 3</h3>
-    <p>Paragraph text. <strong>Bold</strong>, <em>Italic</em>, <a href="#">Link</a></p>
-    <blockquote>Blockquote text.</blockquote>
-    <code>Inline code</code>
-    <pre><code>Preformatted block</code></pre>
-  </section>
+			<p>
+				Paragraph text.
+				<a href="#">Link</a>
+			</p>
+			<blockquote>Blockquote text.</blockquote>
+		</section>
 
-  <section>
-    <h1>Buttons</h1>
-    <button class="primary active">Primary Active</button>
-    <button class="primary hover">Primary Hover</button>
-    <button class="primary inactive">Primary Inactive</button>
-    <button class="secondary active">Secondary Active</button>
-    <button class="secondary hover">Secondary Hover</button>
-    <button class="secondary inactive">Secondary Inactive</button>
-  </section>
+		<section>
+			<h1>Buttons</h1>
+			<p>Kleuren moeten nog aangepast worden door de feedback van de klant.</p>
+			<button class="primary active">Primary Active</button>
+			<button class="primary hover">Primary Hover</button>
+		</section>
 
-  <section>
-    <h1>Forms</h1>
-    <form>
-      <label for="text">Text Input</label>
-      <input type="text" id="text" name="text"><br>
+		<section>
+			<h1>Forms</h1>
+			<h2>(Nog niet gedesigned)</h2>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email"><br>
+			<form>
+				<label for="text">Text Input</label>
+				<input type="text" id="text" name="text" /><br />
 
-      <label for="select">Select</label>
-      <select id="select" name="select">
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select><br>
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" /><br />
 
-      <label><input type="checkbox"> Checkbox</label><br>
-      <label><input type="radio" name="radio"> Radio</label><br>
+				<label for="select">Select</label>
+				<select id="select" name="select">
+					<option>Option 1</option>
+					<option>Option 2</option></select
+				><br />
 
-      <label for="textarea">Textarea</label><br>
-      <textarea id="textarea"></textarea><br>
+				<label><input type="checkbox" /> Checkbox</label><br />
+				<label><input type="radio" name="radio" /> Radio</label><br />
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+				<label for="textarea">Textarea</label><br />
+				<textarea id="textarea"></textarea><br />
 
-  <section>
-    <h1>Lists</h1>
-    <ul>
-      <li>Unordered item</li>
-      <li>Unordered item</li>
-    </ul>
-    <ol>
-      <li>Ordered item</li>
-      <li>Ordered item</li>
-    </ol>
-    <dl>
-      <dt>Term</dt>
-      <dd>Definition</dd>
-    </dl>
-  </section>
+				<button type="submit">Submit</button>
+			</form>
+		</section>
 
-  <section>
-    <h1>Tables</h1>
-    <table border="1">
-      <thead>
-        <tr><th>Header 1</th><th>Header 2</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Row 1 Cell 1</td><td>Row 1 Cell 2</td></tr>
-        <tr><td>Row 2 Cell 1</td><td>Row 2 Cell 2</td></tr>
-      </tbody>
-    </table>
-  </section>
+		<section>
+			<h1>Lists</h1>
+			<ul>
+				<li>Unordered item</li>
+				<li>Unordered item</li>
+			</ul>
+		</section>
 
-  <section>
-    <h1>Grid</h1>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
-      <div>Grid Item 1</div>
-      <div>Grid Item 2</div>
-      <div>Grid Item 3</div>
-    </div>
-  </section>
+		<section>
+			<h1>Tables</h1>
+			<table border="1">
+				<tbody>
+					<tr>
+						<td>Row 1 Cell 1</td>
+					</tr>
+					<tr>
+						<td>Row 2 Cell 1</td>
+					</tr>
+					<tr>
+						<td>Row 3 Cell 1</td>
+					</tr>
+					<tr>
+						<td>Row 4 Cell 1</td>
+					</tr>
+					<tr>
+						<td>Row 5 Cell 1</td>
+					</tr>
+					<tr>
+						<td>Row 6 Cell 1</td>
+					</tr>
+					<tr>
+						<td>Row 7 Cell 1</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
 
-</body>
+		<section>
+			<h1>Grid</h1>
+			<div
+				style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 10px"
+			>
+				<div>Grid Item 1</div>
+				<div>Grid Item 2</div>
+				<div>Grid Item 3</div>
+				<div>Grid Item 4</div>
+				<div>Grid Item 5</div>
+				<div>Grid Item 6</div>
+				<div>Grid Item 7</div>
+				<div>Grid Item 8</div>
+				<div>Grid Item 9</div>
+				<div>Grid Item 10</div>
+				<div>Grid Item 11</div>
+				<div>Grid Item 12</div>
+			</div>
+		</section>
+	</body>
 </html>
