@@ -1,212 +1,367 @@
 <!DOCTYPE html>
 <html lang="nl">
-	<head>
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="../images/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="../images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="../images/favicon-16x16.png"
-		/>
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../images/favicon-16x16.png"
+    />
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Saved by the Bell</title>
-		<link rel="manifest" href="../images/site.webmanifest" />
-		<link href="../css/main.css" rel="stylesheet" />
-	</head>
-	<body>
-		<header>
-			<div>
-				<a href="../index.html" class="logo">
-					<img src="../images/logo sbtb.png" alt="Saved by the bell logo" />
-				</a>
-			</div>
-			<div>
-				<button class="nav-toggle" aria-label="Open menu">☰</button>
-				<nav>
-					<ul>
-						<li><a class="nav-item" href="../index.html">Home</a></li>
-						<li><a class="nav-item" href="aboutus.html">Over ons</a></li>
-						<li><a class="nav-item" href="materiaal.html">Materiaal</a></li>
-						<li><a class="nav-item" href="deelnemen.html">Deelnemen</a></li>
-						<li class="dropdown">
-							<a href="#" class="nav-item dropdown-toggle">Samenwerking ▾</a>
-							<ul class="dropdown-menu">
-								<li><a class="nav-item" href="samenwerken.html">Hoe samenwerken</a></li>
-								<li><a class="nav-item" href="activiteiten.html">Activiteiten</a></li>
-							</ul>
-						</li>
-						<li><a class="nav-item" href="contact.html">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		<div class="deelnemenblok blok">
-  <h1>Materiaal</h1>
-</div>
-<section class="materiaalpagina">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved by the Bell</title>
+    <link rel="manifest" href="../images/site.webmanifest" />
+    <link href="../css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="../index.html" class="logo">
+          <img src="../images/logo sbtb.png" alt="Saved by the bell logo" />
+        </a>
+      </div>
+      <div>
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+        <nav>
+          <ul>
+            <li><a class="nav-item" href="../index.html">Home</a></li>
+            <li><a class="nav-item" href="aboutus.html">Over ons</a></li>
+            <li><a class="nav-item" href="materiaal.html">Materiaal</a></li>
+            <li><a class="nav-item" href="deelnemen.html">Deelnemen</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-item dropdown-toggle">Samenwerking ▾</a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="nav-item" href="samenwerken.html"
+                    >Hoe samenwerken</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-item" href="activiteiten.html">Activiteiten</a>
+                </li>
+              </ul>
+            </li>
+            <li><a class="nav-item" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="deelnemenblok blok">
+      <h1>Materiaal</h1>
+    </div>
+    <section class="materiaalpagina">
+      <div class="filter-buttons">
+        <button class="kleuter">KLEUTER</button>
+        <button class="lager">LAGER</button>
+        <button class="secundair">SECUNDAIR</button>
+        <button class="hoger">HOGER</button>
+      </div>
 
-<div class="filter-buttons">
-  <button class="kleuter">KLEUTER</button>
-  <button class="lager">LAGER</button>
-  <button class="secundair">SECUNDAIR</button>
-  <button class="hoger">HOGER</button>
-</div>
+      <div class="subfilter-buttons">
+        <button class="les">Les</button>
+        <button class="beeld">Beeld</button>
+        <button class="lied">Lied</button>
+        <button class="video">Video</button>
+      </div>
 
-<div class="subfilter-buttons">
-  <button class="les">Les</button>
-  <button class="beeld">Beeld</button>
-  <button class="lied">Lied</button>
-  <button class="video">Video</button>
-</div>
+      <div class="materiaal-lijst">
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Belmoment: toespraak</h3>
+            <p>
+              Wil je graag een toespraak houden bij het belmoment? Dan vind je
+              hieronder een basistekst.
+              <a href="../images/Speech belmoment.docx" download>DOWNLOAD</a>
+            </p>
+          </div>
+        </div>
 
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Tweede graad: presentatie</h3>
+            <p>
+              De presentatie is gemaakt in Canva. Hieronder vind je de
+              weergavelink. Klik rechtsboven op 'Weergave' om de presentatie het
+              hele schermt te laten vullen.
+              <a
+                href="https://www.canva.com/design/DAGMbQTwlIc/78YBdm84JFTo955Thruz7A/edit"
+                target="_blank"
+                >KLIK HIER OM DE PRESENTATIE TE OPENEN</a
+              ><br />
+              Wil je de presentatie nog aanpassen? Ga dan aan de slag met het
+              sjabloon.
+              <a
+                href="https://www.canva.com/design/DAGMbQTwlIc/AUMV-dLSYJg7BVw6SQAlGw/view?utm_content=DAGMbQTwlIc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview"
+                target="_blank"
+                >OPEN HIER HET SJABLOON</a
+              >
+            </p>
+          </div>
+        </div>
 
-  <div class="materiaal-lijst">
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Belmoment: This or that?</h3>
+            <p>
+              Deze dilemma's kun je gebruiken als je een 'This or that' wilt
+              organiseren tijdens jullie belmoment.
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/This%20or%20that%20SBTB%202024.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Belmoment: toespraak</h3>
-    <p>
-      Wil je graag een toespraak houden bij het belmoment? Dan vind je hieronder een basistekst. <a href="../images/Speech belmoment.docx" download>DOWNLOAD</a>
-    </p>
-  </div>
-</div>
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Belmoment: vragen 'ren je rot'</h3>
+            <p>
+              Deze quizvragen kun je gebruiken voor de ren-je-rot-activiteit bij
+              het belmoment.
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Vragen%20%27Ren%20je%20rot%27%20SBTB%202024.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Tweede graad: presentatie</h3>
-    <p>
-      De presentatie is gemaakt in Canva. Hieronder vind je de weergavelink. Klik rechtsboven op 'Weergave' om de presentatie het hele schermt te laten vullen. <a href="https://www.canva.com/design/DAGMbQTwlIc/78YBdm84JFTo955Thruz7A/edit" target="_blank">KLIK HIER OM DE PRESENTATIE TE OPENEN</a><br>
-	  Wil je de presentatie nog aanpassen? Ga dan aan de slag met het sjabloon. <a href="https://www.canva.com/design/DAGMbQTwlIc/AUMV-dLSYJg7BVw6SQAlGw/view?utm_content=DAGMbQTwlIc&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" target="_blank">OPEN HIER HET SJABLOON</a>
-    </p>
-  </div>
-</div>
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Naroepliedje 'Wij gaan naar school' (presentatie)</h3>
+            <p>
+              Deze presentatie kun je gebruiken om de tekst en het ritme met de
+              leerlingen in te oefenen. Open de presentatie via onderstaande
+              link.
+              <a
+                href="https://www.canva.com/design/DAGQSoyHveo/b4vxmSymcUpMu6MnjakeZg/edit"
+                target="_blank"
+                >PRESENTATIE OPENEN</a
+              ><br />
+              We maakten ook een versie met ingesproken tekst. Zo kan je in de
+              klas oefenen en de tekst herhalen tijdens de stiltes na elk stukje
+              tekst.
+              <a
+                href="https://www.canva.com/design/DAGQWMqqb30/7LZ7Gm82LXW8Aiv-wGizYQ/edit"
+                target="_blank"
+                >PRESENTATIE/FILMPJE MET GELUID OPENEN</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Belmoment: This or that?</h3>
-    <p>
-Deze dilemma's kun je gebruiken als je een 'This or that' wilt organiseren tijdens jullie belmoment. <a href="https://www.savedbythebell.be/sites/default/files/materiaal/This%20or%20that%20SBTB%202024.pdf" target="_blank">DOWNLOAD</a></p>
-  </div>
-</div>
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Naroepliedje 'Wij gaan naar school' (afdrukblad)</h3>
+            <p>
+              Hier vind je de tekst van het naroepliedje. Dit document kun je
+              afdrukken.
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Naroepliedje%20SBTB%202024%20%281%29.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Belmoment: vragen 'ren je rot'</h3>
-    <p>
-Deze quizvragen kun je gebruiken voor de ren-je-rot-activiteit bij het belmoment. <a href="https://www.savedbythebell.be/sites/default/files/materiaal/Vragen%20%27Ren%20je%20rot%27%20SBTB%202024.pdf" target="_blank">DOWNLOAD</a></p>
-  </div>
-</div>
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Stappenplan: Ontdek de bellocatie via What3words</h3>
+            <p>
+              Gebruik dit stappenplan om jullie gekozen bellocatie om te zetten
+              in drie woorden via de webapplicatie 'What3words'.
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Bellocatie%20ontdekken%20via%20what3words%20SBTB%202024%20.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Naroepliedje 'Wij gaan naar school' (presentatie)</h3>
-    <p>
-Deze presentatie kun je gebruiken om de tekst en het ritme met de leerlingen in te oefenen.
-Open de presentatie via onderstaande link. <a href="https://www.canva.com/design/DAGQSoyHveo/b4vxmSymcUpMu6MnjakeZg/edit" target="_blank">PRESENTATIE OPENEN</a><br>
-We maakten ook een versie met ingesproken tekst. Zo kan je in de klas oefenen en de tekst herhalen tijdens de stiltes na elk stukje tekst.
-<a href="https://www.canva.com/design/DAGQWMqqb30/7LZ7Gm82LXW8Aiv-wGizYQ/edit" target="_blank">PRESENTATIE/FILMPJE MET GELUID OPENEN</a>
-</p>
-  </div>
-</div>
+        <div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Het belmoment</h3>
+            <p>
+              Hier vind je alle info om het belmoment op jouw school te
+              organiseren.
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Belmoment%20SBTB%202024.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Tweede graad: presentatie </h3>
-    <p>
-      De presentatie is gemaakt in Canva. Hieronder vind je de weergavelink. Klik rechtsboven op 'Weergave' om de presentatie het hele schermt e laten vullen.
-    </p>
-  </div>
-</div>
+        <div class="kaart hoger les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Derde graad: spelmateriaal</h3>
+            <p>
+              Je kunt het spelmateriaal downloaden via de website van Studio Globo.
+              <a
+                href="https://studioglobo.be/aanbod/schoolweg-spelbord-over-armoede"
+                target="_blank"
+                >GA NAAR DE WEBPAGINA</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Tweede graad: presentatie </h3>
-    <p>
-      De presentatie is gemaakt in Canva. Hieronder vind je de weergavelink. Klik rechtsboven op 'Weergave' om de presentatie het hele schermt e laten vullen.
-    </p>
-  </div>
-</div>
+        <div class="kaart hoger les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Derde graad: lesfiche</h3>
+            <p>
+              De weg naar school en deelnemen aan activiteiten op en rond school is niet voor elk kind evident. Bespreek dit met jouw klas aan de hand van het spel ‘Schoolweg’. Zo denk je samen na over drempels op (weg naar) school en kansarmoede op school. 
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Lesfiche%203e%20graad%20SBTB%202024.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-<div class="kaart lager les">
-  <div class="kaart-afbeelding">Afbeelding</div>
-  <div class="kaart-info">
-    <h3>Tweede graad: presentatie </h3>
-    <p>
-      De presentatie is gemaakt in Canva. Hieronder vind je de weergavelink. Klik rechtsboven op 'Weergave' om de presentatie het hele schermt e laten vullen.
-    </p>
-  </div>
-</div>
+		<div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Tweede graad - tekenblad 'mijn ideale weg naar school'</h3>
+            <p>
+Druk dit tekenblad af voor elke leerling.              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/2e%20graad%20Sjabloon%20mijn%20weg%20naar%20school.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
+		<div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Tweede graad - vragen bij posters </h3>
+            <p>
+Hier vind je de vragen bij de posters. Je kunt ze afdrukken voor jezelf of online raadplegen.              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Tweede%20graad%20-%20vragen%20bij%20de%20posters.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-  </div>
-</section>
+		<div class="kaart lager les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Tweede graad - posters</h3>
+            <p>
+Druk deze posters af op A3-formaat en in kleur en hang ze op, verspreid over het klaslokaal of - als je je leerlingen wilt laten lopen - het schooldomein.              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Posters%202degraad%20.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
 
-		<footer class="site-footer">
-			<div class="footer-content">
-				<div class="footer-col footer-social">
-					<div class="footer-item">
-						<img
-							src="../images/facebook_logo.png"
-							alt="Facebook"
-							class="footer-icon"
-						/>
-						<span>Studio Globo</span>
-					</div>
-					<div class="footer-item">
-						<img src="../images/mail_logo.png" alt="Email" class="footer-icon" />
-						<a href="mailto:info@studioglobo.be">info@studioglobo.be</a>
-					</div>
-					<div class="footer-item">
-						<img
-							src="../images/insta_logo.png"
-							alt="Instagram"
-							class="footer-icon"
-						/>
-						<span>Studio Globo</span>
-					</div>
-					<div class="footer-item">
-						<img src="../images/gsm_logo.png" alt="Telefoon" class="footer-icon" />
-						<span>02 520 05 30</span>
-					</div>
-				</div>
+		<div class="kaart hoger les">
+          <div class="kaart-afbeelding">Afbeelding</div>
+          <div class="kaart-info">
+            <h3>Derde graad: lesfiche</h3>
+            <p>
+              De weg naar school en deelnemen aan activiteiten op en rond school is niet voor elk kind evident. Bespreek dit met jouw klas aan de hand van het spel ‘Schoolweg’. Zo denk je samen na over drempels op (weg naar) school en kansarmoede op school. 
+              <a
+                href="https://www.savedbythebell.be/sites/default/files/materiaal/Lesfiche%203e%20graad%20SBTB%202024.pdf"
+                target="_blank"
+                >DOWNLOAD</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<div class="footer-col footer-org">
-					<p class="footer-org-text">
-						Saved by the bell is een organisatie van :
-					</p>
-					<img
-						src="../images/sglogo.png"
-						alt="Studio Globo logo"
-						class="footer-org-logo"
-					/>
-				</div>
-			</div>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-col footer-social">
+          <div class="footer-item">
+            <img
+              src="../images/facebook_logo.png"
+              alt="Facebook"
+              class="footer-icon"
+            />
+            <span>Studio Globo</span>
+          </div>
+          <div class="footer-item">
+            <img
+              src="../images/mail_logo.png"
+              alt="Email"
+              class="footer-icon"
+            />
+            <a href="mailto:info@studioglobo.be">info@studioglobo.be</a>
+          </div>
+          <div class="footer-item">
+            <img
+              src="../images/insta_logo.png"
+              alt="Instagram"
+              class="footer-icon"
+            />
+            <span>Studio Globo</span>
+          </div>
+          <div class="footer-item">
+            <img
+              src="../images/gsm_logo.png"
+              alt="Telefoon"
+              class="footer-icon"
+            />
+            <span>02 520 05 30</span>
+          </div>
+        </div>
 
-			<div class="footer-bottom">
-				© Studio Globo 2025 | <a href="#">Disclaimer</a> |
-				<a href="#">Privacy</a>
-			</div>
-		</footer>
+        <div class="footer-col footer-org">
+          <p class="footer-org-text">
+            Saved by the bell is een organisatie van :
+          </p>
+          <img
+            src="../images/sglogo.png"
+            alt="Studio Globo logo"
+            class="footer-org-logo"
+          />
+        </div>
+      </div>
 
-		<script src="../js/index.js"></script>
-	</body>
+      <div class="footer-bottom">
+        © Studio Globo 2025 | <a href="#">Disclaimer</a> |
+        <a href="#">Privacy</a>
+      </div>
+    </footer>
+
+    <script src="../js/index.js"></script>
+  </body>
 </html>
