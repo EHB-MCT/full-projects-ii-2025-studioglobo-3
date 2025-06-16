@@ -450,7 +450,6 @@ body {
 }
 
 
-
 .kaart-info {
   flex: 1;
 }
@@ -465,4 +464,9 @@ body {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+
+button.active {
+  background-color: #c59496;
 }
