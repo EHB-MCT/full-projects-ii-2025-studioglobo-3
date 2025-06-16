@@ -23,9 +23,10 @@ button {
 }
 
 button:hover {
-	background-color: #ffffff;
-	box-shadow: -3 3 0 0px #f1bfbe;
+	opacity: 60%;
+	box-shadow: -3 3 0 0px #000000;
 	color: #000000;
+	transition: 0.3s;
 }
 
 .wrapper {
