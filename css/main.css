@@ -468,5 +468,6 @@ body {
 
 
 button.active {
-  background-color: #c59496;
+  background-color: #F4A6C0;
+  color: white;
 }
