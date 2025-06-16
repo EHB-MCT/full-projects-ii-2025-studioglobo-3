@@ -19,6 +19,10 @@ button {
 	transition: 0.3s;
 }
 
+.greenbtn {
+	background: #D8E28C;
+}
+
 button:hover {
 	background-color: #ffffff;
 	box-shadow: -3 3 0 0px #f1bfbe;
@@ -27,7 +31,7 @@ button:hover {
 
 .wrapper {
 	display: grid;
-	margin: 0 64px;
+	margin: 0;
 
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(10, minmax(50px, auto));
@@ -45,7 +49,7 @@ button:hover {
 	width: 100%;
 }
 .home-text {
-	grid-column: 7/13;
+	grid-column: 7/12;
 	grid-row: 2/3;
 
 	background-color: #82c9c0;
