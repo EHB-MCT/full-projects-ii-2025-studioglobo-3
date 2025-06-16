@@ -53,3 +53,42 @@ function setActive(buttons, selected) {
   }
   selected.classList.add("active");
 }
+
+
+//deelnemen
+
+document.addEventListener('DOMContentLoaded', () => {
+  const steps = Array.from(document.querySelectorAll('.step-circle'));
+  const forms = Array.from(document.querySelectorAll('.step-form'));
+  let current = 1;
+
+  function showStep(n) {
+    // highlight circles
+    steps.forEach(c => c.classList.toggle('active', +c.dataset.step === n));
+    // show correct form
+    forms.forEach(f => f.classList.toggle('active', +f.dataset.step === n));
+  }
+
+  // init
+  showStep(current);
+
+  // click on circles
+  steps.forEach(circle =>
+    circle.addEventListener('click', () => {
+      current = +circle.dataset.step;
+      showStep(current);
+    })
+  );
+
+  // next / prev buttons
+  document.querySelectorAll('.next-btn').forEach(btn =>
+    btn.addEventListener('click', () => {
+      if (current < forms.length) showStep(++current);
+    })
+  );
+  document.querySelectorAll('.prev-btn').forEach(btn =>
+    btn.addEventListener('click', () => {
+      if (current > 1) showStep(--current);
+    })
+  );
+});

@@ -430,13 +430,12 @@ button:hover {
 	width: 100%;
 }
 
-/*deelnemen*/
 .deelnemen {
 	display: grid;
 	margin: 0 64px;
 
 	grid-template-columns: repeat(13, 1fr);
-	grid-template-rows: repeat(29, minmax(50px, auto));
+	grid-template-rows: repeat(10, minmax(50px, auto));
 
 	position: relative;
 	align-items: center;
