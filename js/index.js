@@ -56,39 +56,32 @@ function setActive(buttons, selected) {
 
 
 //deelnemen
+let cfCurrent = 1;
+    const cfTotal = 3;
+    const cfForm = document.getElementById('cf-form');
+    const cfPrev = cfForm.querySelector('.cf-prev-btn');
+    const cfNext = cfForm.querySelector('.cf-next-btn');
+    const cfSteps = [...document.querySelectorAll('.cf-form-step')];
+    const cfCircles = [...document.querySelectorAll('.cf-step')];
 
-document.addEventListener('DOMContentLoaded', () => {
-  const steps = Array.from(document.querySelectorAll('.step-circle'));
-  const forms = Array.from(document.querySelectorAll('.step-form'));
-  let current = 1;
+    function cfUpdate() {
+      cfCircles.forEach(c => {
+        c.classList.toggle('active', +c.dataset.step === cfCurrent);
+      });
+      cfSteps.forEach(f => {
+        f.classList.toggle('active', +f.dataset.step === cfCurrent);
+      });
+      cfPrev.disabled = cfCurrent === 1;
+      cfNext.textContent = cfCurrent === cfTotal ? 'Verzenden' : 'Volgende';
+    }
 
-  function showStep(n) {
-    // highlight circles
-    steps.forEach(c => c.classList.toggle('active', +c.dataset.step === n));
-    // show correct form
-    forms.forEach(f => f.classList.toggle('active', +f.dataset.step === n));
-  }
+    function cfChangeStep(dir) {
+      if (cfCurrent === cfTotal && dir === 1) {
+        cfForm.submit();
+        return;
+      }
+      cfCurrent = Math.max(1, Math.min(cfTotal, cfCurrent + dir));
+      cfUpdate();
+    }
 
-  // init
-  showStep(current);
-
-  // click on circles
-  steps.forEach(circle =>
-    circle.addEventListener('click', () => {
-      current = +circle.dataset.step;
-      showStep(current);
-    })
-  );
-
-  // next / prev buttons
-  document.querySelectorAll('.next-btn').forEach(btn =>
-    btn.addEventListener('click', () => {
-      if (current < forms.length) showStep(++current);
-    })
-  );
-  document.querySelectorAll('.prev-btn').forEach(btn =>
-    btn.addEventListener('click', () => {
-      if (current > 1) showStep(--current);
-    })
-  );
-});
+    cfUpdate();

@@ -1,138 +1,185 @@
 <!DOCTYPE html>
 <html lang="nl">
-	<head>
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="../images/apple-touch-icon.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="../images/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="../images/favicon-16x16.png"
-		/>
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Saved by the Bell</title>
-		<link rel="manifest" href="../images/site.webmanifest" />
-		<link href="../css/main.css" rel="stylesheet" />
-	</head>
-	<body>
-		<header>
-			<div>
-				<a href="../index.html" class="logo">
-					<img src="../images/logo sbtb.png" alt="Saved by the bell logo" />
-				</a>
-			</div>
-			<div>
-				<button class="nav-toggle" aria-label="Open menu">☰</button>
-				<nav>
-					<ul>
-						<li><a class="nav-item" href="../index.html">Home</a></li>
-						<li><a class="nav-item" href="aboutus.html">Over ons</a></li>
-						<li><a class="nav-item" href="materiaal.html">Materiaal</a></li>
-						<li><a class="nav-item" href="deelnemen.html">Deelnemen</a></li>
-						<li class="dropdown">
-							<a href="#" class="nav-item dropdown-toggle">Samenwerking ▾</a>
-							<ul class="dropdown-menu">
-								<li><a class="nav-item" href="samenwerken.html">Hoe samenwerken</a></li>
-								<li><a class="nav-item" href="activiteiten.html">Activiteiten</a></li>
-							</ul>
-						</li>
-						<li><a class="nav-item" href="contact.html">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Saved by the Bell</title>
+	<link rel="manifest" href="../images/site.webmanifest" />
+	<link href="../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<div>
+			<a href="../index.html" class="logo">
+				<img src="../images/logo sbtb.png" alt="Saved by the bell logo" />
+			</a>
+		</div>
+		<div>
+			<button class="nav-toggle" aria-label="Open menu">☰</button>
+			<nav>
+				<ul>
+					<li><a class="nav-item" href="../index.html">Home</a></li>
+					<li><a class="nav-item" href="aboutus.html">Over ons</a></li>
+					<li><a class="nav-item" href="materiaal.html">Materiaal</a></li>
+					<li><a class="nav-item" href="deelnemen.html">Deelnemen</a></li>
+					<li class="dropdown">
+						<a href="#" class="nav-item dropdown-toggle">Samenwerking ▾</a>
+						<ul class="dropdown-menu">
+							<li><a class="nav-item" href="samenwerken.html">Hoe samenwerken</a></li>
+							<li><a class="nav-item" href="activiteiten.html">Activiteiten</a></li>
+						</ul>
+					</li>
+					<li><a class="nav-item" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="wrapperdeelnemen">
 		<div class="deelnemenblok blok">
-  <h1>Deelnemen</h1>
-</div>
-<section class="deelnemen-stats">
-  <div class="stats-number">114514</div>
-  <div class="stats-subtitle">Dit is hoeveel mensen in 2024 mee belden.</div>
-</section>
+			<h1>Deelnemen</h1>
+		</div>
 
-<section class="deelnemen-map-search">
-  <div class="map">
-    <img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">
-  </div>
-  <div class="search-bar">
-    <input type="text" placeholder="Search">
-  </div>
-</section>
 
-<section class="deelnemen-form">
-  <h2>Wil jij ook deelnemen?</h2>
-  <p>Vul het formulier in om mee te doen aan Saved by the bell</p>
-  <form>
-    <label for="naam">Naam:</label>
-    <input type="text" id="naam" name="naam" placeholder="Uw naam...">
 
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" placeholder="Uw E-mail...">
-
-    <label for="onderwerp">Uw school:</label>
-    <input type="text" id="onderwerp" name="onderwerp" placeholder="Uw school...">
-
-    <button type="button">Verzend</button>
-  </form>
-</section>
-
-		<footer class="site-footer">
-			<div class="footer-content">
-				<div class="footer-col footer-social">
-					<div class="footer-item">
-						<img
-							src="../images/facebook_logo.png"
-							alt="Facebook"
-							class="footer-icon"
-						/>
-						<span>Studio Globo</span>
+		<section class="deelnemen-form">
+			<h2>Wil jij ook deelnemen?</h2>
+			<p>Vul het formulier in om mee te doen aan Saved by the bell</p>
+			<div class="cf-container">
+				<!-- Stepper -->
+				<div class="cf-stepper">
+					<div class="cf-step active" data-step="1">
+						<div class="cf-circle">1</div>
+						<div class="cf-step-label">Personal</div>
 					</div>
-					<div class="footer-item">
-						<img src="../images/mail_logo.png" alt="Email" class="footer-icon" />
-						<a href="mailto:info@studioglobo.be">info@studioglobo.be</a>
+					<div class="cf-step" data-step="2">
+						<div class="cf-circle">2</div>
+						<div class="cf-step-label">Details</div>
 					</div>
-					<div class="footer-item">
-						<img
-							src="../images/insta_logo.png"
-							alt="Instagram"
-							class="footer-icon"
-						/>
-						<span>Studio Globo</span>
-					</div>
-					<div class="footer-item">
-						<img src="../images/gsm_logo.png" alt="Telefoon" class="footer-icon" />
-						<span>02 520 05 30</span>
+					<div class="cf-step" data-step="3">
+						<div class="cf-circle">3</div>
+						<div class="cf-step-label">Submit</div>
 					</div>
 				</div>
 
-				<div class="footer-col footer-org">
-					<p class="footer-org-text">
-						Saved by the bell is een organisatie van :
-					</p>
-					<img
-						src="../images/sglogo.png"
-						alt="Studio Globo logo"
-						class="footer-org-logo"
-					/>
+				<form id="cf-form">
+					<!-- Step 1 -->
+					<fieldset class="cf-form-step active" data-step="1">
+						<div>
+							<label for="cf-name">*Naam en voornaam</label>
+							<input type="text" id="cf-name" name="name" placeholder="Uw naam en voornaam…" required>
+						</div>
+						<div>
+							<label for="cf-phone">*Telefoonnummer</label>
+							<input type="tel" id="cf-phone" name="phone" placeholder="Uw telefoonnummer…" required>
+						</div>
+						<div>
+							<label for="cf-email">*E-mail</label>
+							<input type="email" id="cf-email" name="email" placeholder="Uw E-mail…" required>
+						</div>
+					</fieldset>
+
+					<!-- Step 2 -->
+					<fieldset class="cf-form-step" data-step="2">
+						<div>
+							<label for="cf-school">*Naam School</label>
+							<input type="text" id="cf-school" name="school" placeholder="Uw school naam…">
+						</div>
+						<div>
+							<label for="cf-niveau">*onderwijs Niveaus</label>
+							<input type="text" id="cf-niveau" name="niveau"
+								placeholder="Kleuter, Lager, Secundair, Hoger, Buitengewoon, …">
+						</div>
+						<div>
+							<label for="cf-netten">*Onderwijs-netten</label>
+							<input type="text" id="cf-netten" name="netten" placeholder="GO!, KOV, OVSG, POV, Vrij (And), …">
+						</div>
+						<div>
+							<label for="cf-studenten">Aantal Studenten</label>
+							<input type="text" id="cf-studenten" name="studenten" placeholder="Het Aantal Studenten…">
+						</div>
+						<div>
+							<label for="cf-klassen">Aantal Klassen</label>
+							<input type="text" id="cf-klassen" name="klassen" placeholder="Het Aantal Klassen…">
+						</div>
+					</fieldset>
+
+					<!-- Step 3 -->
+					<fieldset class="cf-form-step end" data-step="3">
+						<div>
+							<label for="cf-activiteiten">Activiteiten</label>
+							<input type="text" id="cf-activiteiten" name="activiteiten" placeholder="Wat zijn de activiteiten die jullie (extra) doen tijdens Saved by the bell?">
+						</div>
+						<div>
+							<label for="cf-message">Bericht</label>
+							<input type="text" id="cf-message" name="message" placeholder="Wilt u nog iets achterlaten?">
+						</div>
+					</fieldset>
+
+					<!-- Nav Buttons -->
+					<div class="cf-buttons">
+						<button type="button" class="cf-prev-btn" onclick="cfChangeStep(-1)" disabled>Terug</button>
+						<button type="button" class="cf-next-btn" onclick="cfChangeStep(1)">Volgende</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="deelnemen-stats">
+			<div class="stats-number">114514</div>
+			<div class="stats-subtitle">Dit is hoeveel mensen in 2024 mee belden.</div>
+		</section>
+
+		<section class="deelnemen-map-search">
+			<div class="map">
+				<img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">
+			</div>
+			<div class="search-bar">
+				<input type="text" placeholder="Search">
+			</div>
+		</section>
+	</div>
+	<footer class="site-footer">
+		<div class="footer-content">
+			<div class="footer-col footer-social">
+				<div class="footer-item">
+					<img src="../images/facebook_logo.png" alt="Facebook" class="footer-icon" />
+					<span>Studio Globo</span>
+				</div>
+				<div class="footer-item">
+					<img src="../images/mail_logo.png" alt="Email" class="footer-icon" />
+					<a href="mailto:info@studioglobo.be">info@studioglobo.be</a>
+				</div>
+				<div class="footer-item">
+					<img src="../images/insta_logo.png" alt="Instagram" class="footer-icon" />
+					<span>Studio Globo</span>
+				</div>
+				<div class="footer-item">
+					<img src="../images/gsm_logo.png" alt="Telefoon" class="footer-icon" />
+					<span>02 520 05 30</span>
 				</div>
 			</div>
 
-			<div class="footer-bottom">
-				© Studio Globo 2025 | <a href="#">Disclaimer</a> |
-				<a href="#">Privacy</a>
+			<div class="footer-col footer-org">
+				<p class="footer-org-text">
+					Saved by the bell is een organisatie van :
+				</p>
+				<img src="../images/sglogo.png" alt="Studio Globo logo" class="footer-org-logo" />
 			</div>
-		</footer>
+		</div>
 
-		<script src="../js/index.js"></script>
-	</body>
+		<div class="footer-bottom">
+			© Studio Globo 2025 | <a href="#">Disclaimer</a> |
+			<a href="#">Privacy</a>
+		</div>
+	</footer>
+
+	<script src="../js/index.js"></script>
+</body>
+
 </html>
