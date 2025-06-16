@@ -14,8 +14,7 @@ button {
 	border: none;
 	cursor: pointer;
 	border-radius: 8px;
-	width: 200px;
-	height: 55px;
+	padding: 10px;
 	transition: 0.3s;
 }
 
@@ -277,7 +276,7 @@ button:hover {
 }
 .artikel {
 	grid-row: 19/20;
-	grid-column: 2/12;
+	grid-column: 2/13;
 	text-align: center;
 }
 .artikel h2 {
@@ -385,7 +384,7 @@ button:hover {
 }
 .promo-img2 {
 	grid-row: 25 /26;
-	grid-column: 6/11;
+	grid-column: 6/12;
 }
 .promo-img2 img {
 	height: auto;
