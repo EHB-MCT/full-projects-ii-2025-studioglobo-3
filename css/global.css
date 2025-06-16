@@ -184,12 +184,13 @@ button:hover {
 	line-height: 30px;
 	margin-bottom: 35px;
 }
+/* over*/
 .wrapper-2 {
 	display: grid;
 	margin: 0 64px;
 
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(25, minmax(50px, auto));
+	grid-template-rows: repeat(29, minmax(50px, auto));
 
 	position: relative;
 	align-items: center;
@@ -283,8 +284,18 @@ button:hover {
 	line-height: 30px;
 	margin-bottom: 35px;
 }
+.artikel-img {
+	grid-row: 18/20;
+	grid-column: 4/10;
+	position: absolute;
+	z-index: -1;
+}
+.artikel-img img {
+	height: auto;
+	width: 100%;
+}
 .promo-text {
-	grid-row: 21/22;
+	grid-row: 22/23;
 	grid-column: 2/9;
 }
 .promo-text p {
@@ -292,21 +303,22 @@ button:hover {
 	margin-bottom: 35px;
 }
 .promo-img {
-	grid-row: 22/24;
-	grid-column: 2/12;
+	grid-row: 23/25;
+	grid-column: 2/7;
 }
 .promo-img img {
 	height: auto;
 	width: 100%;
 }
 .promo-img2 {
-	grid-row: 24/25;
-	grid-column: 3/11;
+	grid-row: 25 /26;
+	grid-column: 6/11;
 }
 .promo-img2 img {
 	height: auto;
 	width: 100%;
 }
+/*contact*/
 .wrapper-3 {
 	display: grid;
 	margin: 0 64;
