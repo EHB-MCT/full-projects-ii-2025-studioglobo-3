@@ -325,3 +325,132 @@ body {
 	background-size: contain;
 	background-position: center;
 }
+
+
+.cf-container {
+	display: grid;
+	margin: 0 64;
+
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, minmax(20px, auto));
+	padding: 30px;
+	border-radius: 8px;
+}
+
+/* Stepper */
+.cf-stepper {
+	grid-row: 1/2;
+	grid-column: 4/10;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.cf-step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	position: relative;
+}
+.cf-step:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	top: 12px;
+	right: -50%;
+	width: 100%;
+	height: 2px;
+	background: #ccc;
+	z-index: -1;
+}
+.cf-circle {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: #ccc;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 6px;
+}
+.cf-step.active .cf-circle {
+	background: #5dbeb0;
+}
+.cf-step-label {
+	font-size: 0.85rem;
+	color: #666;
+}
+
+/* Form Steps */
+#cf-form {
+	grid-row: 3/7;
+	grid-column: 5/9;
+}
+
+.cf-form-step {
+	display: none;
+}
+.cf-form-step.active {
+	display: grid;
+
+	grid-row-gap: 20px;
+}
+.cf-form-step label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+.cf-form-step input {
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+.cf-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+.cf-buttons button {
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.cf-prev-btn {
+	background: #eee;
+}
+.cf-next-btn {
+	background: #f48fb1;
+	color: white;
+}
+
+.kaart {
+	display: flex;
+	align-items: flex-start;
+	background-color: #fafafa;
+	padding: 2rem;
+	border-radius: 16px;
+	gap: 2rem;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+	max-width: 900px;
+	margin: 2rem auto;
+}
+
+.kaart-afbeelding {
+	width: 100px;
+	height: 100px;
+	min-width: 100px;
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.8rem;
+	font-weight: 500;
+}

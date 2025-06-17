@@ -51,7 +51,6 @@
 			<h2>Wil jij ook deelnemen?</h2>
 			<p>Vul het formulier in om mee te doen aan Saved by the bell</p>
 			<div class="cf-container">
-				<!-- Stepper -->
 				<div class="cf-stepper">
 					<div class="cf-step active" data-step="1">
 						<div class="cf-circle">1</div>
@@ -68,7 +67,6 @@
 				</div>
 
 				<form id="cf-form">
-					<!-- Step 1 -->
 					<fieldset class="cf-form-step active" data-step="1">
 						<div>
 							<label for="cf-name">*Naam en voornaam</label>
@@ -84,32 +82,34 @@
 						</div>
 					</fieldset>
 
-					<!-- Step 2 -->
 					<fieldset class="cf-form-step" data-step="2">
 						<div>
-							<label for="cf-school">*Naam School</label>
-							<input type="text" id="cf-school" name="school" placeholder="Uw school naam…">
+							<label for="cf-school">*Naam school</label>
+							<input type="text" id="cf-school" name="school" placeholder="Uw school naam…" required>
+						</div>
+												<div>
+							<label for="cf-adres">*Adres</label>
+							<input type="text" id="cf-adres" name="adres" placeholder="Straat van de school, nummer, postcode, gemeente, …" required>
 						</div>
 						<div>
-							<label for="cf-niveau">*onderwijs Niveaus</label>
+							<label for="cf-niveau">*Onderwijs niveaus</label>
 							<input type="text" id="cf-niveau" name="niveau"
-								placeholder="Kleuter, Lager, Secundair, Hoger, Buitengewoon, …">
+								placeholder="Kleuter, Lager, Secundair, Hoger, Buitengewoon, …" required>
 						</div>
 						<div>
 							<label for="cf-netten">*Onderwijs-netten</label>
-							<input type="text" id="cf-netten" name="netten" placeholder="GO!, KOV, OVSG, POV, Vrij (And), …">
+							<input type="text" id="cf-netten" name="netten" placeholder="GO!, KOV, OVSG, POV, Vrij (And), …" required>
 						</div>
 						<div>
-							<label for="cf-studenten">Aantal Studenten</label>
-							<input type="text" id="cf-studenten" name="studenten" placeholder="Het Aantal Studenten…">
+							<label for="cf-studenten">*Aantal studenten</label>
+							<input type="text" id="cf-studenten" name="studenten" placeholder="Het Aantal Studenten…" required>
 						</div>
 						<div>
-							<label for="cf-klassen">Aantal Klassen</label>
-							<input type="text" id="cf-klassen" name="klassen" placeholder="Het Aantal Klassen…">
+							<label for="cf-klassen">*Aantal klassen</label>
+							<input type="text" id="cf-klassen" name="klassen" placeholder="Het Aantal Klassen…" required>
 						</div>
 					</fieldset>
 
-					<!-- Step 3 -->
 					<fieldset class="cf-form-step end" data-step="3">
 						<div>
 							<label for="cf-activiteiten">Activiteiten</label>
@@ -121,10 +121,9 @@
 						</div>
 					</fieldset>
 
-					<!-- Nav Buttons -->
 					<div class="cf-buttons">
 						<button type="button" class="cf-prev-btn" onclick="cfChangeStep(-1)" disabled>Terug</button>
-						<button type="button" class="cf-next-btn" onclick="cfChangeStep(1)">Volgende</button>
+						<button type="submit" class="cf-next-btn" onclick="cfChangeStep(1)">Volgende</button>
 					</div>
 				</form>
 			</div>
