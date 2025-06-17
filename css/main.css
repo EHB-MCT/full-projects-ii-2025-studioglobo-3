@@ -326,163 +326,291 @@ body {
 	background-size: contain;
 	background-position: center;
 }
-.griddeelnemen {
-	display: grid;
-	  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, minmax(50px, auto));
-}
+
+
 
 .deelnemen-een {
-	  grid-column: 2 / 3;         /* van kolom 1 tot de laatste */
-  grid-row: 2 / 5;   
-	position: relative;
-	margin: 0 auto;
-	text-align: left;
-	padding: 50px;
-
-	background-image: url(../images/deelnemen-vorm-1.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+  display: grid;
+  /* you can keep 3 columns if you need them for other layout reasons, 
+     but the overlap cell spans them all */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 100%;
+  position: relative;      /* just in case you ever want absolute children */
 }
 
-/* 1) Fix de margin-shorthand (eenheden missen) en zorg dat de container full-width is */
+.dlnmtext,
+.dlnmimg {
+  /* force both into exactly the same single cell */
+  grid-column: 1 / -1;
+  grid-row:    1 / -1;
+}
+
+.dlnmimg img {
+  display: block;
+  width: clamp(200px, 50%, 80%);
+  height: auto;
+  z-index: 0;
+}
+
+.dlnmtext {
+  z-index: 1;
+  padding: 1rem;
+  text-align: left;
+}
+
+
 .cf-container {
   display: grid;
   width: 100%;
-  margin: 0 auto;              /* of: margin: 0; */
-  /* margin: 0 64px; */        /* als je echt 64px zij-padding wilt */
+  margin: 0;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, minmax(20px, auto));
   padding: 30px;
   border-radius: 8px;
-  background-image: url('../images/deelnemen-vorm-2.png');
 }
 
-/* 2) Laat de stepper over de volle breedte lopen */
+.deelnemen-twee {
+  z-index: -10;
+  grid-column: 1 / 13;
+  grid-row: 1 / 10;
+  position: relative;
+  margin: 0 auto;
+  text-align: left;
+  padding: 50px;
+  background: url('../images/deelnemen-vorm-2.png');
+}
+
 .cf-stepper {
-  grid-column: 1 / -1;         /* van kolom 1 tot de laatste */
-  grid-row: 1;                 /* of: grid-row: 1 / 2; */
+  grid-column: 4 / 10;
+  grid-row: 2 / 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
 }
 
-/* 3) Laat het form over de volle breedte lopen */
 #cf-form {
-  grid-column: 1 / -1;         /* op alle 12 kolommen */
-  grid-row: 2 / 2;            /* begint onder de stepper en loopt door */
+  grid-column: 4 / 10;
+  grid-row: 4 / 8;
 }
 
-/* 4) Optioneel: zorg dat elke actieve stap full-width is */
+.cf-form-step {
+  display: none;
+}
+
 .cf-form-step.active {
   display: grid;
-  grid-column: 1 / -1;         /* inputvelden beslaan volledige breedte van de container */
+  grid-column: 1 / -1;
   grid-row-gap: 20px;
 }
 
-.cf-step {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex: 1;
-	position: relative;
-}
-.cf-step:not(:last-child)::after {
-	content: "";
-	position: absolute;
-	top: 12px;
-	right: -50%;
-	width: 100%;
-	height: 2px;
-	background: #ccc;
-	z-index: -1;
-}
-.cf-circle {
-	width: 28px;
-	height: 28px;
-	border-radius: 50%;
-	background: #ccc;
-	color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 6px;
-}
-.cf-step.active .cf-circle {
-	background: #5dbeb0;
-}
-.cf-step-label {
-	font-size: 0.85rem;
-	color: #666;
-}
-
-/* Form Steps */
-
-
-.cf-form-step {
-	display: none;
-}
-.cf-form-step.active {
-	display: grid;
-
-	grid-row-gap: 20px;
-}
 .cf-form-step label {
-	display: block;
-	margin-bottom: 4px;
+  display: block;
+  margin-bottom: 4px;
 }
+
 .cf-form-step input {
-	width: 100%;
-	padding: 8px 12px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: 1rem;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.cf-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.cf-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: #ccc;
+  z-index: -1;
+}
+
+.cf-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ccc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.cf-step.active .cf-circle {
+  background: #5dbeb0;
+}
+
+.cf-step-label {
+  font-size: 0.85rem;
+  color: #666;
 }
 
 .cf-buttons {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 20px;
-}
-.cf-buttons button {
-	padding: 8px 16px;
-	border: none;
-	border-radius: 4px;
-	font-size: 1rem;
-	cursor: pointer;
-}
-.cf-prev-btn {
-	background: #eee;
-}
-.cf-next-btn {
-	background: #f48fb1;
-	color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-.kaart {
-	display: flex;
-	align-items: flex-start;
-	background-color: #fafafa;
-	padding: 2rem;
-	border-radius: 16px;
-	gap: 2rem;
-	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-	max-width: 900px;
-	margin: 2rem auto;
+.cf-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cf-prev-btn {
+  background: #eee;
+}
+
+.cf-next-btn {
+  background: #f48fb1;
+  color: white;
+}
+
+.kaart,
+.kaart-activiteiten {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fafafa;
+  padding: 2rem;
+  border-radius: 16px;
+  gap: 2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 2rem auto;
 }
 
 .kaart-afbeelding {
-	width: 100px;
-	height: 100px;
-	min-width: 100px;
-	background-color: white;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 0.8rem;
-	font-weight: 500;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.kaart-info {
+  flex: 1;
+}
+
+.kaart-info h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.kaart-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.deelnemen-stats {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.deelnemen-stats .stats-number {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.deelnemen-stats .stats-subtitle {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.deelnemen-map-search {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: right;
+  background-color: #d1d1d1;
+  border-radius: 15px;
+}
+
+.deelnemen-map-search .map {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.deelnemen-map-search .map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.deelnemen-map-search .search-bar input {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 15px;
+  width: 200px;
+}
+
+.deelnemen-form {
+  margin: 0 auto 4rem;
+  text-align: left;
+}
+
+.deelnemen-form p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.deelnemen-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.deelnemen-form label {
+  font-weight: bold;
+}
+
+.deelnemen-form input,
+.deelnemen-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.deelnemen-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.deelnemen-form button {
+  align-self: flex-end;
+  width: 120px;
+  height: 45px;
+}
+
+.filter-buttons,
+.subfilter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem auto;
 }
