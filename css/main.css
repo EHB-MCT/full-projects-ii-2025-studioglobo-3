@@ -2,6 +2,7 @@
 @import "global.css";
 @import "navigation.css";
 @import "typography.css";
+@import "globalover.css";
 
 body {
 	margin: 0;
@@ -326,6 +327,14 @@ body {
 	background-position: center;
 }
 
+.deelnemen-een {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+
+	background-image: url('../images/deelnemen-vorm-1.png');
+	background-repeat: no-repeat;
+	background-position: relative;
+}
 
 .cf-container {
 	display: grid;
