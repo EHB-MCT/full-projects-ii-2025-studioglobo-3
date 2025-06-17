@@ -326,35 +326,62 @@ body {
 	background-size: contain;
 	background-position: center;
 }
+.griddeelnemen {
+	display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, minmax(50px, auto));
+}
 
 .deelnemen-een {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	  grid-column: 2 / 3;         /* van kolom 1 tot de laatste */
+  grid-row: 2 / 5;   
+	position: relative;
+	margin: 0 auto;
+	text-align: left;
+	padding: 50px;
 
-	background-image: url('../images/deelnemen-vorm-1.png');
+	background-image: url(../images/deelnemen-vorm-1.png);
 	background-repeat: no-repeat;
-	background-position: relative;
+	background-size: cover;
+	background-position: center;
 }
 
+/* 1) Fix de margin-shorthand (eenheden missen) en zorg dat de container full-width is */
 .cf-container {
-	display: grid;
-	margin: 0 64;
-
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(6, minmax(20px, auto));
-	padding: 30px;
-	border-radius: 8px;
+  display: grid;
+  width: 100%;
+  margin: 0 auto;              /* of: margin: 0; */
+  /* margin: 0 64px; */        /* als je echt 64px zij-padding wilt */
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, minmax(20px, auto));
+  padding: 30px;
+  border-radius: 8px;
+  background-image: url('../images/deelnemen-vorm-2.png');
 }
 
-/* Stepper */
+/* 2) Laat de stepper over de volle breedte lopen */
 .cf-stepper {
-	grid-row: 1/2;
-	grid-column: 4/10;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 30px;
+  grid-column: 1 / -1;         /* van kolom 1 tot de laatste */
+  grid-row: 1;                 /* of: grid-row: 1 / 2; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
 }
+
+/* 3) Laat het form over de volle breedte lopen */
+#cf-form {
+  grid-column: 1 / -1;         /* op alle 12 kolommen */
+  grid-row: 2 / 2;            /* begint onder de stepper en loopt door */
+}
+
+/* 4) Optioneel: zorg dat elke actieve stap full-width is */
+.cf-form-step.active {
+  display: grid;
+  grid-column: 1 / -1;         /* inputvelden beslaan volledige breedte van de container */
+  grid-row-gap: 20px;
+}
+
 .cf-step {
 	display: flex;
 	flex-direction: column;
@@ -392,10 +419,7 @@ body {
 }
 
 /* Form Steps */
-#cf-form {
-	grid-row: 3/7;
-	grid-column: 5/9;
-}
+
 
 .cf-form-step {
 	display: none;
@@ -407,7 +431,6 @@ body {
 }
 .cf-form-step label {
 	display: block;
-	font-weight: bold;
 	margin-bottom: 4px;
 }
 .cf-form-step input {
