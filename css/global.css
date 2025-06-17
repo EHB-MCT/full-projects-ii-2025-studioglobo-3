@@ -430,7 +430,6 @@ button:hover {
 	width: 100%;
 }
 
-
 button.active {
 	background-color: #f4a6c0;
 	color: white;
@@ -450,7 +449,7 @@ button.active {
 	margin: 0 64;
 
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: repeat(9, minmax(20px, auto));
+	grid-template-rows: repeat(25, minmax(50px, auto));
 
 	position: relative;
 	align-items: center;
@@ -481,5 +480,13 @@ button.active {
 }
 .de-bel-img {
 	grid-row: 6/7;
-	grid-column: 2/5;
+	grid-column: 2/6;
+}
+.waarom {
+	grid-row: 6/7;
+	grid-column: 7/12;
+}
+.aangaan {
+	grid-row: 9/10;
+	grid-column: 2/7;
 }

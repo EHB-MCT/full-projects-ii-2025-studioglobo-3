@@ -37,7 +37,7 @@ nav ul li a .nav-item {
 	color: black;
 }
 a {
-	size: 16pt;
+	size: 18pt;
 	color: #000;
 	text-decoration: none;
 }
@@ -46,7 +46,7 @@ b {
 }
 
 ul li {
-	font-size: 12pt;
+	font-size: 18pt;
 	margin-left: 15px;
 	list-style: none;
 }
