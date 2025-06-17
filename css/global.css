@@ -454,6 +454,9 @@ button.active {
 	position: relative;
 	align-items: center;
 }
+.samenwerkenpagina ul li {
+	font-size: 18pt;
+}
 .samen-intro {
 	grid-row: 1/4;
 	grid-column: 2/7;
