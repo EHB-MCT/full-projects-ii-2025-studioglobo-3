@@ -11,8 +11,10 @@
 .materiaal-foto {
 	width: 80%;
 }
+
 .button-materiaal {
 	font-size: 14px;
+	margin-top: 2%;
 }
 .wrapper-3 {
 	display: grid;
