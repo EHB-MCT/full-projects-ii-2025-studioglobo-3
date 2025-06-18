@@ -19,7 +19,7 @@ let selectedType = null;
 
 const levelButtons = document.querySelectorAll(".filter-buttons button");
 const typeButtons = document.querySelectorAll(".subfilter-buttons button");
-const kaarten = document.querySelectorAll(".kaart");
+const kaarten = document.querySelectorAll(".card");
 
 for (var i = 0; i < levelButtons.length; i++) {
   levelButtons[i].addEventListener("click", function () {
