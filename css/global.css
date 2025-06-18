@@ -140,7 +140,7 @@ button:hover {
 
 .n1-img {
 	grid-column: 2/6;
-	grid-row: 6/7;
+	grid-row: 5/6;
 }
 .n1-img img {
 	width: 100%;
@@ -148,7 +148,7 @@ button:hover {
 }
 .n1-text {
 	grid-column: 7/12;
-	grid-row: 6/7;
+	grid-row: 5/6;
 }
 .n1-text h2 {
 	line-height: 30px;
@@ -160,7 +160,7 @@ button:hover {
 }
 .n2-img {
 	grid-column: 2/6;
-	grid-row: 9/10;
+	grid-row: 8/9;
 }
 .n2-img img {
 	width: 100%;
@@ -168,7 +168,7 @@ button:hover {
 }
 .n2-text {
 	grid-column: 7/12;
-	grid-row: 9/10;
+	grid-row: 8/9;
 }
 .n2-text h2 {
 	line-height: 30px;
@@ -180,7 +180,7 @@ button:hover {
 }
 .n3-img {
 	grid-column: 2/6;
-	grid-row: 12/13;
+	grid-row: 11/12;
 }
 .n3-img img {
 	width: 100%;
@@ -188,7 +188,7 @@ button:hover {
 }
 .n3-text {
 	grid-column: 7/12;
-	grid-row: 12/13;
+	grid-row: 11/12;
 }
 .n3-text h2 {
 	line-height: 30px;
