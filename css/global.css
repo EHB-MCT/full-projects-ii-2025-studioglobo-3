@@ -448,7 +448,7 @@ button.active {
 	display: grid;
 	margin: 0 64;
 
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: repeat(25, minmax(50px, auto));
 
 	position: relative;
@@ -457,19 +457,17 @@ button.active {
 
 .samenwerkenpagina ul li {
 	font-size: 18pt;
-	list-style-type: decimal;
-}
-.samenwerkenpagina ul li ul li {
-	font-size: 18pt;
 	list-style-type: disc;
+	margin-left: 40px;
 }
+
 .samen-intro {
 	grid-row: 1/4;
 	grid-column: 2/7;
 }
 .samen-intro-img {
 	grid-row: 3/5;
-	grid-column: 7/12;
+	grid-column: 8/13;
 }
 .samenwerkenpagina img {
 	width: 100%;
@@ -481,7 +479,6 @@ button.active {
 }
 .samenwerkenpagina p {
 	line-height: 30px;
-	margin-bottom: 35px;
 }
 .de-bel {
 	grid-row: 4/6;
@@ -493,7 +490,7 @@ button.active {
 }
 .waarom {
 	grid-row: 6/7;
-	grid-column: 7/12;
+	grid-column: 8/13;
 }
 .waarom ul li {
 	list-style-type: disc;
@@ -507,12 +504,12 @@ button.active {
 	grid-column: 2/7;
 }
 .aangaan-img {
-	grid-column: 8/12;
+	grid-column: 9/13;
 	grid-row: 9/12;
 }
 .onderhoud-text {
 	grid-row: 15/18;
-	grid-column: 7/12;
+	grid-column: 8/13;
 }
 .onderhoud-img {
 	grid-column: 2/6;
