@@ -90,16 +90,3 @@ let cfCurrent = 1;
 
 // API
 
-async function loadSchools() {
-      const response = await fetch('http://127.0.0.1:8090/api/collections/School/records?perPage=100');
-      const data = await response.json();
-      const schools = data.items;              
-
-      const list = document.getElementById('school-list');
-      schools.forEach(sch => {
-        const li = document.createElement('li');
-        li.textContent = sch.name + ' — ' + sch.street + ', ' + sch.city;
-        list.appendChild(li);
-      });
-    }
-    window.addEventListener('DOMContentLoaded', loadSchools);
