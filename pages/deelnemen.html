@@ -52,117 +52,147 @@
 			</div>
 			<div class="dlnmimg"><img src="../images/deelnemen-vorm-1.png"></div>
 		</div>
-			<section class="deelnemen-form">
+		<section class="deelnemen-form">
 
-				<div class="cf-container">
-					<div class="deelnemen-twee"><img src="../images/fromback.png"></div>
+			<div class="cf-container">
+				<div class="deelnemen-twee"><img src="../images/fromback.png"></div>
 
-					<div class="cf-stepper">
-						<div class="cf-step active" data-step="1">
-							<div class="cf-circle">1</div>
-						</div>
-						<div class="cf-step" data-step="2">
-							<div class="cf-circle">2</div>
-						</div>
-						<div class="cf-step" data-step="3">
-							<div class="cf-circle">3</div>
-						</div>
+				<div class="cf-stepper">
+					<div class="cf-step active" data-step="1">
+						<div class="cf-circle">1</div>
 					</div>
+					<div class="cf-step" data-step="2">
+						<div class="cf-circle">2</div>
+					</div>
+					<div class="cf-step" data-step="3">
+						<div class="cf-circle">3</div>
+					</div>
+				</div>
 
-					<form id="cf-form">
-						<fieldset class="cf-form-step active" data-step="1">
-							<div>
-								<label for="cf-name">*Naam en voornaam</label>
-								<input type="text" id="cf-name" name="name" placeholder="Uw naam en voornaam…" required>
-							</div>
-							<div>
-								<label for="cf-phone">*Telefoonnummer</label>
-								<input type="tel" id="cf-phone" name="phone" placeholder="Uw telefoonnummer…" required>
-							</div>
-							<div>
-								<label for="cf-email">*E-mail</label>
-								<input type="email" id="cf-email" name="email" placeholder="Uw E-mail…" required>
-							</div>
-						</fieldset>
-
-						<fieldset class="cf-form-step" data-step="2">
-							<div>
-								<label for="cf-school">*Naam school</label>
-								<input type="text" id="cf-school" name="school" placeholder="Uw school naam…" required>
-							</div>
-							<div>
-								<label for="cf-adres">*Adres</label>
-								<input type="text" id="cf-adres" name="adres"
-									placeholder="Straat van de school, nummer, postcode, gemeente, …" required>
-							</div>
-							<div>
-								<label for="cf-niveau">*Onderwijs niveaus</label>
-								<input type="text" id="cf-niveau" name="niveau"
-									placeholder="Kleuter, Lager, Secundair, Hoger, Buitengewoon, …" required>
-							</div>
-							<div>
-								<label for="cf-netten">*Onderwijs-netten</label>
-								<input type="text" id="cf-netten" name="netten"
-									placeholder="GO!, KOV, OVSG, POV, Vrij (And), …" required>
-							</div>
-							<div>
-								<label for="cf-studenten">*Aantal studenten</label>
-								<input type="text" id="cf-studenten" name="studenten"
-									placeholder="Het Aantal Studenten…" required>
-							</div>
-							<div>
-								<label for="cf-klassen">*Aantal klassen</label>
-								<input type="text" id="cf-klassen" name="klassen" placeholder="Het Aantal Klassen…"
-									required>
-							</div>
-						</fieldset>
-
-						<fieldset class="cf-form-step end" data-step="3">
-							<div>
-								<label for="cf-activiteiten">Activiteiten</label>
-								<input type="text" id="cf-activiteiten" name="activiteiten"
-									placeholder="Wat zijn de activiteiten die jullie (extra) doen tijdens Saved by the bell?">
-							</div>
-							<div>
-								<label for="cf-message">Bericht</label>
-								<input type="text" id="cf-message" name="message"
-									placeholder="Wilt u nog iets achterlaten?">
-							</div>
-						</fieldset>
-
-						<div class="cf-buttons">
-							<button type="button" class="cf-prev-btn" onclick="cfChangeStep(-1)" disabled>Terug</button>
-							<button type="submit" class="cf-next-btn" onclick="cfChangeStep(1)">Volgende</button>
+				<form id="cf-form">
+					<fieldset class="cf-form-step active" data-step="1">
+						<div>
+							<label for="cf-name">*Naam en voornaam</label>
+							<input type="text" id="cf-name" name="name" placeholder="Uw naam en voornaam…" required>
 						</div>
-					</form>
-				</div>
-			</section>
+						<div>
+							<label for="cf-phone">*Telefoonnummer</label>
+							<input type="tel" id="cf-phone" name="phone" placeholder="Uw telefoonnummer…" required>
+						</div>
+						<div>
+							<label for="cf-email">*E-mail</label>
+							<input type="email" id="cf-email" name="email" placeholder="Uw E-mail…" required>
+						</div>
+					</fieldset>
 
-			<section class="deelnemen-stats">
-				<div class="stats-rinkelaarsback"><img src="../images/rinkelaarsback.png"></div>
-				<div class="stats-number">114514</div>
-				<div class="stats-subtitle">Dit is hoeveel mensen in 2024 mee belden.</div>
-			</section>
+					<fieldset class="cf-form-step" data-step="2">
+						<div>
+							<label for="cf-school">*Naam school</label>
+							<input type="text" id="cf-school" name="school" placeholder="Uw school naam…" required>
+						</div>
+						<div>
+							<label for="cf-adres">*Adres</label>
+							<input type="text" id="cf-adres" name="adres"
+								placeholder="Straat van de school, nummer, postcode, gemeente, …" required>
+						</div>
+						<div>
+							<label for="cf-niveau">*Onderwijs niveaus</label>
+							<input type="text" id="cf-niveau" name="niveau"
+								placeholder="Kleuter, Lager, Secundair, Hoger, Buitengewoon, …" required>
+						</div>
+						<div>
+							<label for="cf-netten">*Onderwijs-netten</label>
+							<input type="text" id="cf-netten" name="netten"
+								placeholder="GO!, KOV, OVSG, POV, Vrij (And), …" required>
+						</div>
+						<div>
+							<label for="cf-studenten">*Aantal studenten</label>
+							<input type="text" id="cf-studenten" name="studenten" placeholder="Het Aantal Studenten…"
+								required>
+						</div>
+						<div>
+							<label for="cf-klassen">*Aantal klassen</label>
+							<input type="text" id="cf-klassen" name="klassen" placeholder="Het Aantal Klassen…"
+								required>
+						</div>
+					</fieldset>
 
-			<section class="deelnemen-map-search">				
-				<div class="search-bar">
-					<input type="text" placeholder="Search">
-				</div>
-				<div class="map">
-					<img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">
+					<fieldset class="cf-form-step end" data-step="3">
+						<div>
+							<label for="cf-activiteiten">Activiteiten</label>
+							<input type="text" id="cf-activiteiten" name="activiteiten"
+								placeholder="Wat zijn de activiteiten die jullie (extra) doen tijdens Saved by the bell?">
+						</div>
+						<div>
+							<label for="cf-message">Bericht</label>
+							<input type="text" id="cf-message" name="message"
+								placeholder="Wilt u nog iets achterlaten?">
+						</div>
+					</fieldset>
+
+					<div class="cf-buttons">
+						<button type="button" class="cf-prev-btn" onclick="cfChangeStep(-1)" disabled>Terug</button>
+						<button type="submit" class="cf-next-btn" onclick="cfChangeStep(1)">Volgende</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="deelnemen-stats">
+			<div class="stats-rinkelaarsback"><img src="../images/rinkelaarsback.png"></div>
+			<div class="stats-number">114.514</div>
+			<div class="stats-subtitle">Dit is hoeveel mensen in 2024 mee belden.</div>
+		</section>
+
+		<section class="deelnemen-map-search">
+			<div class="maptext">
+				<p>Aantal scholen die mee doen</p>
+				<h2>5.165</h2>
+			</div>
+
+			<div class="search-bar">
+				<input type="text" placeholder="Zoek op scholen">
+			</div>
+
+			<div class="map">
+				<img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">
+			</div>
+
+			<div class="topright">
+				<img src="../images/maptopright.png">
+			</div>
+
+			<div class="bottomright">
+				<img src="../images/mapbottomright.png">
+			</div>
+
+			<div class="bottomleft">
+				<img src="../images/mapbottomleft.png">
+			</div>
+
+			<div class="legendemap">
+				<p>Aantal scholen per provincie</p>
+			</div>
+
+			<div class="legendemap-twee">
+				<ul class="legend">
+					<li>700 – 800</li>
+					<li>600 – 700</li>
+					<li>400 – 600</li>
+					<li>300 – 400</li>
+					<li>200 – 300</li>
+					<li>100 – 200</li>
+					<li>0 – 100</li>
+				</ul>
 				</div>
 
-			</section>
-		
+		</section>
+
 		<footer class="site-footer">
 			<div class="footer-content">
 				<div class="footer-col footer-social">
 					<div class="footer-item">
-						<img
-							src="../images/facebook_logo.png"
-							alt="Facebook"
-							class="footer-icon"
-						/>
+						<img src="../images/facebook_logo.png" alt="Facebook" class="footer-icon" />
 						<span>Saved by the bell</span>
 					</div>
 					<div class="footer-item">
