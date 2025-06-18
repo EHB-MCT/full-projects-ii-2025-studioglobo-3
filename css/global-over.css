@@ -3,13 +3,16 @@
 	margin: 0 64px;
 
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(20, minmax(50px, auto));
+	grid-template-rows: repeat(12, minmax(50px, auto));
 	gap: 2rem;
 	position: relative;
 }
 
 .materiaal-foto {
 	width: 80%;
+}
+.button-materiaal {
+	font-size: 14px;
 }
 .wrapper-3 {
 	display: grid;
@@ -60,4 +63,13 @@ button.active {
 	justify-content: center;
 	gap: 1rem;
 	margin: 2rem auto;
+}
+.faq {
+	display: grid;
+	grid-row: 11/12;
+	grid-column: 2/7;
+	text-align: left;
+}
+.vraag1 {
+	font-family: Arial, Helvetica, sans-serif;
 }
