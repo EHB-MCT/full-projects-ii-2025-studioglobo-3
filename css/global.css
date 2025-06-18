@@ -51,11 +51,17 @@ button:hover {
 .home-text {
 	grid-column: 7/12;
 	grid-row: 2/3;
+	align-items: center;
 
-	background-color: #82c9c0;
 	text-align: center;
+}
+.home-text-1 {
+	background-color: #82c9c0;
 	padding: 40px;
 	border-radius: 10px;
+}
+.home-text-2 {
+	align-items: center;
 }
 .home-text h1 {
 	line-height: 100px;
@@ -66,10 +72,7 @@ button:hover {
 .home-text p {
 	line-height: 30px;
 }
-.home-text-2 {
-	grid-column: 7/12;
-	grid-row: 2/3;
-}
+
 .cta-text {
 	grid-column: 2/7;
 	grid-row: 5/9;
@@ -398,8 +401,6 @@ button:hover {
 	height: auto;
 	width: 100%;
 }
-
-/*contact*/
 
 /* samenwerken*/
 .samenwerkenpagina {
