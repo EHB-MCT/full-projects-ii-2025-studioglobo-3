@@ -3,7 +3,7 @@
 	margin: 0 64px;
 
 	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(29, minmax(50px, auto));
+	grid-template-rows: repeat(20, minmax(50px, auto));
 
 	position: relative;
 }
