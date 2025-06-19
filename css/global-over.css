@@ -78,3 +78,77 @@ button.active {
 	gap: 1rem;
 	margin: 2rem auto;
 }
+.faq {
+	grid-row: 9/12;
+	grid-column: 2/12;
+}
+.faq p {
+	margin-bottom: 20px;
+}
+.faq-item {
+	border-bottom: 1px solid #ccc;
+	padding: 1rem 0;
+}
+
+.faq-question {
+	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease, opacity 0.4s ease;
+	opacity: 0;
+	font-size: 1rem;
+	line-height: 1.5;
+	margin-top: 0.5rem;
+}
+.faq-answer button {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.faq-item.active .faq-answer {
+	max-height: 200px;
+	opacity: 1;
+}
+
+.arrow {
+	transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+	transform: rotate(180deg);
+}
+.arrow {
+	font-size: 1.3rem;
+	transform: rotate(0deg);
+	transition: transform 0.3s ease;
+}
+
+.faq-item.active .arrow {
+	transform: rotate(180deg); /* draait de pijl omhoog */
+}
+.vorm1-faq {
+	z-index: -1;
+	grid-row: 11/12;
+	grid-column: 2/6;
+}
+.vorm1-faq img {
+	width: 100%;
+	height: auto;
+	opacity: 34%;
+}
+.vorm2-faq {
+	z-index: -1;
+	grid-row: 11/12;
+	grid-column: 10/12;
+}
+.vorm2-faq img {
+	width: 100%;
+	height: auto;
+	opacity: 34%;
+}

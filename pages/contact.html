@@ -77,7 +77,128 @@
 			<div class="contact-vorm">
 				<img src="../images/vorm-contact.png" alt="" />
 			</div>
+			<div class="vorm1-faq">
+				<img src="../images/contact-vorm-2.png" alt="" />
+			</div>
+			<div class="vorm2-faq">
+				<img src="../images/contact-vorm-3.png" alt="" />
+			</div>
+
+			<div class="faq">
+				<h1>FAQ</h1>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h2>Is er een vast tijdstip voor het belmoment?</h2>
+						<span class="arrow">▼</span>
+					</div>
+					<div class="faq-answer">
+						<p>
+							Nee, er is geen vast tijdstip: elke school of klas kiest zelf het
+							meest geschikte moment om de bel voor Saved by the bell te laten
+							rinkelen. Sommige scholen koppelen de actie aan een feestelijke
+							verwelkoming op de Dag van de Leerkracht, terwijl anderen eerst de
+							lesvoorstellen gebruiken en daarna de bel luiden.
+						</p>
+						<p>
+							Op 5 oktober hoor je daarom van ’s ochtends tot in de namiddag
+							overal in Vlaanderen, Brussel en zelfs wereldwijd de schoolbel.
+						</p>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h2>Kan het belmoment ook op een andere dag?</h2>
+						<span class="arrow">▼</span>
+					</div>
+					<div class="faq-answer">
+						<p>
+							Sommige scholen melden dat ze op 5 oktober een pedagogische
+							studiedag of facultatieve vrije dag hebben. Je kunt de belactie
+							daarom ook de dag ervoor of erna organiseren, of opnemen in het
+							programma van de studiedag door bijvoorbeeld een korte video te
+							tonen en een thematekst voor te lezen.
+						</p>
+						<p>
+							Registreer je deelname en help ons het totaalaantal belmomenten te
+							verhogen, én ontvang extra affiches en tips.
+						</p>
+						<button href="#" class="btn-primary greenbtn">
+							<b>Deelnemen</b>
+						</button>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h2>Wat doen we met ons foto- en filmmateriaal?</h2>
+						<span class="arrow">▼</span>
+					</div>
+					<div class="faq-answer">
+						<p>
+							Na Saved by the bell verzamelen we zoveel mogelijk foto’s van
+							acties via Facebook of per e-mail savedbythebell@studioglobo.be om
+							alle initiatieven in kaart te brengen.
+						</p>
+						<p>
+							Post je foto op Facebook, tag dan onze pagina en gebruik de
+							hashtag #savedbythebell2024, zodat jouw school niet in het
+							overzicht ontbreekt!
+						</p>
+						<img
+							src="../images/facebook_logo.png"
+							alt="Facebook"
+							class="footer-icon"
+						/>
+						<span><b>Saved by the bell</b></span>
+					</div>
+				</div>
+
+				<div class="faq-item">
+					<div class="faq-question">
+						<h2>Mogen wij de lokale pers uitnodigen?</h2>
+						<span class="arrow">▼</span>
+					</div>
+					<div class="faq-answer">
+						<p>
+							Als je school groots uitpakt tijdens Saved by the bell, nodig dan
+							je contacten in de lokale pers (radio, tv, online en kranten) uit
+							om verslag te doen. Vanaf september staat hier een geactualiseerd
+							persbericht dat je eenvoudig kunt aanvullen met de gegevens van
+							jouw school.
+						</p>
+					</div>
+				</div>
+				<div class="faq-item">
+					<div class="faq-question">
+						<h2>Hoe informeren we de ouders over onze deelname?</h2>
+						<span class="arrow">▼</span>
+					</div>
+					<div class="faq-answer">
+						<p>
+							Breng ouders op de hoogte van jullie deelname aan Saved by the
+							bell en het belang van kwaliteitsvol onderwijs, hier en
+							wereldwijd, met onze kant-en-klare brief.
+						</p>
+						<p>
+							Geef daarin aan welke attributen de kinderen mogen meebrengen en
+							bewerk eenvoudig het Canvas-sjabloon via de volgende link: Klik
+							<b>HIER</b> om het Canvas-sjabloon te openen.
+						</p>
+					</div>
+				</div>
+			</div>
 		</section>
+
+		<script>
+			document.querySelectorAll(".faq-question").forEach((question) => {
+				question.addEventListener("click", () => {
+					const item = question.parentElement;
+					item.classList.toggle("active");
+				});
+			});
+		</script>
 
 		<footer class="site-footer">
 			<div class="footer-content">
