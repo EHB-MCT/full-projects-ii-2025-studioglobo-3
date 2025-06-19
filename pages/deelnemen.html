@@ -168,9 +168,16 @@
 				<h2>5.165</h2>
 			</div>
 
-			<div class="search-bar">
-				<input type="text" placeholder="Zoek op scholen">
-			</div>
+<div class="search-bar">
+  <input 
+    type="text"
+    id="globalSearch"
+    list="schoolDatalist"
+    placeholder="Zoek op scholen…"
+  >
+  <datalist id="schoolDatalist"></datalist>
+</div>
+<div id="globalResults" style="margin-top:1rem;"></div>
 
 			<div class="map">
 				<img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">

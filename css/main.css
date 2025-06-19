@@ -902,6 +902,17 @@ body {
 	color: #000;
 }
 
+#globalResults {
+	z-index: 200;
+	grid-column: 7/11;
+	grid-row: 2/7;
+	border-radius: 10px;
+	line-height: 40px;
+}
+
+
+
+
 @media (max-width: 480px) {
 	header {
 		display: flex;
@@ -909,8 +920,7 @@ body {
 		align-items: center;
 		padding: 1rem;
 	}
-	.samenwerkenblok {
-	}
+
 
 	.logo img {
 		width: 100px;
