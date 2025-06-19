@@ -5,1044 +5,1043 @@
 @import "global-over.css";
 
 body {
-  margin: 0;
+	margin: 0;
 }
 
 @media (max-width: 480px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+	}
 
-  .logo img {
-    width: 100px;
-  }
+	.logo img {
+		width: 100px;
+	}
 
-  nav {
-    display: none;
-    background-color: #f8bbbe;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    z-index: 1000;
-  }
+	nav {
+		display: none;
+		background-color: #f8bbbe;
+		position: absolute;
+		top: 70px;
+		right: 0;
+		width: 100%;
+		padding: 1rem;
+		z-index: 1000;
+	}
 
-  nav.open {
-    display: block;
-  }
+	nav.open {
+		display: block;
+	}
 
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
+	nav ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		margin: 0;
+		padding: 0;
+	}
 
-  .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    box-shadow: none;
-  }
+	.nav-toggle {
+		display: block;
+		background: none;
+		border: none;
+		font-size: 2rem;
+		box-shadow: none;
+	}
 
-  .wrapper,
-  .nieuws,
-  .wrapper-2,
-  .wrapper-3 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 2rem;
-    margin: 0 1rem;
-  }
+	.wrapper,
+	.nieuws,
+	.wrapper-2,
+	.wrapper-3 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 2rem;
+		margin: 0 1rem;
+	}
 
-  .home,
-  .home-text,
-  .cta-text,
-  .cta-img,
-  .quote-img,
-  .quote-text,
-  .nieuwsblok,
-  .n1-img,
-  .n1-text,
-  .n2-img,
-  .n2-text,
-  .n3-img,
-  .n3-text,
-  .overblok,
-  .intro-img,
-  .intro-text,
-  .graph-text,
-  .graph-img,
-  .bell-img,
-  .bell-text,
-  .duurzaam-text,
-  .duurzaam-img,
-  .artikel,
-  .promo-text,
-  .promo-img,
-  .promo-img2,
-  .contactblok,
-  .contact-img,
-  .contact-text,
-  .contact-vorm {
-    grid-column: 1 / -1;
-    grid-row: auto;
-    text-align: center;
-  }
+	.home,
+	.home-text,
+	.cta-text,
+	.cta-img,
+	.quote-img,
+	.quote-text,
+	.nieuwsblok,
+	.n1-img,
+	.n1-text,
+	.n2-img,
+	.n2-text,
+	.n3-img,
+	.n3-text,
+	.overblok,
+	.intro-img,
+	.intro-text,
+	.graph-text,
+	.graph-img,
+	.bell-img,
+	.bell-text,
+	.duurzaam-text,
+	.duurzaam-img,
+	.artikel,
+	.promo-text,
+	.promo-img,
+	.promo-img2,
+	.contactblok,
+	.contact-img,
+	.contact-text,
+	.contact-vorm {
+		grid-column: 1 / -1;
+		grid-row: auto;
+		text-align: center;
+	}
 
-  .quote-text h2 {
-    line-height: 50px;
-  }
+	.quote-text h2 {
+		line-height: 50px;
+	}
 
-  .home-text,
-  .cta-text,
-  .quote-text,
-  .n1-text,
-  .n2-text,
-  .n3-text,
-  .intro-text,
-  .graph-text,
-  .bell-text,
-  .duurzaam-text,
-  .artikel,
-  .promo-text {
-    padding: 1rem;
-  }
+	.home-text,
+	.cta-text,
+	.quote-text,
+	.n1-text,
+	.n2-text,
+	.n3-text,
+	.intro-text,
+	.graph-text,
+	.bell-text,
+	.duurzaam-text,
+	.artikel,
+	.promo-text {
+		padding: 1rem;
+	}
 
-  h1,
-  h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
+	h1,
+	h2 {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
 
-  p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding: 0 1rem;
-  }
+	p {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		padding: 0 1rem;
+	}
 
-  .btn-primary {
-    width: 100%;
-    max-width: 250px;
-    margin: 0 auto;
-  }
+	.btn-primary {
+		width: 100%;
+		max-width: 250px;
+		margin: 0 auto;
+	}
 
-  img {
-    width: 100%;
-    height: auto;
-  }
+	img {
+		width: 100%;
+		height: auto;
+	}
 
-  .kaart {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+	.kaart {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
 
-  .kaart-afbeelding {
-    margin-bottom: 1rem;
-  }
+	.kaart-afbeelding {
+		margin-bottom: 1rem;
+	}
 
-  .filter-buttons,
-  .subfilter-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
+	.filter-buttons,
+	.subfilter-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .deelnemenblok.blok {
-    padding: 2rem 1rem;
-    background-size: contain;
-    background-position: center;
-  }
+	.deelnemenblok.blok {
+		padding: 2rem 1rem;
+		background-size: contain;
+		background-position: center;
+	}
 
-  .deelnemen-stats .stats-number {
-    font-size: 2.5rem;
-  }
+	.deelnemen-stats .stats-number {
+		font-size: 2.5rem;
+	}
 
-  .deelnemen-stats .stats-subtitle {
-    font-size: 1rem;
-  }
+	.deelnemen-stats .stats-subtitle {
+		font-size: 1rem;
+	}
 
-  .deelnemen-map-search {
-    padding: 1rem;
-  }
+	.deelnemen-map-search {
+		padding: 1rem;
+	}
 
-  .deelnemen-map-search .search-bar {
-    text-align: center;
-  }
+	.deelnemen-map-search .search-bar {
+		text-align: center;
+	}
 
-  .deelnemen-map-search .search-bar input {
-    width: 100%;
-    max-width: 300px;
-    margin: 1rem auto;
-  }
+	.deelnemen-map-search .search-bar input {
+		width: 100%;
+		max-width: 300px;
+		margin: 1rem auto;
+	}
 
-  .deelnemen-form {
-    padding: 1rem;
-  }
+	.deelnemen-form {
+		padding: 1rem;
+	}
 
-  .deelnemen-form h2 {
-    font-size: 1.4rem;
-  }
+	.deelnemen-form h2 {
+		font-size: 1.4rem;
+	}
 
-  .deelnemen-form form {
-    gap: 1rem;
-  }
+	.deelnemen-form form {
+		gap: 1rem;
+	}
 
-  .deelnemen-form input,
-  .deelnemen-form textarea {
-    width: 100%;
-    font-size: 1rem;
-  }
+	.deelnemen-form input,
+	.deelnemen-form textarea {
+		width: 100%;
+		font-size: 1rem;
+	}
 
-  .deelnemen-form button {
-    width: 100%;
-    max-width: 250px;
-    margin: 1rem auto 0;
-  }
+	.deelnemen-form button {
+		width: 100%;
+		max-width: 250px;
+		margin: 1rem auto 0;
+	}
 
-  .contact-text img {
-    max-width: 200px;
-    height: auto;
-    margin: 1rem auto;
-  }
+	.contact-text img {
+		max-width: 200px;
+		height: auto;
+		margin: 1rem auto;
+	}
 
-  .contact-text a {
-    display: inline-block;
-    margin-top: 1rem;
-    font-size: 1rem;
-    word-break: break-word;
-  }
+	.contact-text a {
+		display: inline-block;
+		margin-top: 1rem;
+		font-size: 1rem;
+		word-break: break-word;
+	}
 
-  .site-footer {
-    padding: 1rem;
-  }
+	.site-footer {
+		padding: 1rem;
+	}
 
-  .footer-content {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-    gap: 2rem;
-  }
+	.footer-content {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 1rem;
+		gap: 2rem;
+	}
 
-  .footer-org-logo {
-    max-width: 200px;
-  }
+	.footer-org-logo {
+		max-width: 200px;
+	}
+	.wrapperMateriaal {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .site-footer {
-  color: #000;
-  font-family: arial, sans-serif;
+	color: #000;
+	font-family: arial, sans-serif;
 
-  background-image: url(../images/footer.svg);
-  background-repeat: no-repeat;
+	background-image: url(../images/footer.svg);
+	background-repeat: no-repeat;
 
-  background-size: cover;
-  background-position: top right;
+	background-size: cover;
+	background-position: top right;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  padding: 2rem 64px;
+	padding: 2rem 64px;
 }
 
 .footer-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .footer-social .footer-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
 }
 
 .footer-icon {
-  width: 50px;
-  height: auto;
+	width: 50px;
+	height: auto;
 }
 
 .footer-social a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 .footer-org {
-  align-items: center;
-  text-align: center;
+	align-items: center;
+	text-align: center;
 }
 
 .footer-org-text {
-  font-weight: bold;
-  margin: 0;
-  font-family: "arvo", serif;
+	font-weight: bold;
+	margin: 0;
+	font-family: "arvo", serif;
 }
 
 .footer-org-logo {
-  max-width: 300px;
-  height: auto;
+	max-width: 300px;
+	height: auto;
 }
 
 .footer-bottom {
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.875rem;
-  background: rgba(0, 0, 0, 0.05);
+	text-align: center;
+	padding: 1rem 0;
+	font-size: 0.875rem;
+	background: rgba(0, 0, 0, 0.05);
 }
 
 .footer-bottom a {
-  color: inherit;
-  text-decoration: none;
-  margin: 0 0.5rem;
+	color: inherit;
+	text-decoration: none;
+	margin: 0 0.5rem;
 }
 
 .footer-social {
-  width: 30%;
-  margin-top: 30px;
+	width: 30%;
+	margin-top: 30px;
 }
 
 .footer-org {
-  width: 70%;
-  margin-top: 30px;
+	width: 70%;
+	margin-top: 30px;
 }
 
 .overblok {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  background-image: url(../images/overblok.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/overblok.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 .materiaalblok {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  background-image: url(../images/materiaalblok.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/materiaalblok.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 .deelnemenblok {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  background-image: url(../images/deelnemenbloksvg.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/deelnemenbloksvg.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 .activiteitenblok {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  background-image: url(../images/activiteitenblok.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/activiteitenblok.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 .samenwerkenblok {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  background-image: url(../images/samenwerkenblok.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/samenwerkenblok.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 .contactblok {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 50px;
-  background-image: url(../images/contactblok.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/contactblok.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 .deelnemen-een {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, minmax(25px, auto));
-  place-items: center;
-  width: 100%;
-  position: relative;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(6, minmax(25px, auto));
+	place-items: center;
+	width: 100%;
+	position: relative;
 }
 
 .dlnmtext {
-  grid-column: 2 / 6;
-  grid-row: 5 / 6;
+	grid-column: 2 / 6;
+	grid-row: 5 / 6;
 }
 .dlnmtext h2 {
-  line-height: 50px;
+	line-height: 50px;
 }
 .dlnmtext p {
-  line-height: 30px;
+	line-height: 30px;
 }
 
 .dlnmimg {
-  grid-column: 2 / 6;
-  grid-row: 2 / 7;
+	grid-column: 2 / 6;
+	grid-row: 2 / 7;
 }
 
 .dlnmimg img {
-  display: block;
-  width: 100%;
-  height: auto;
-  z-index: 0;
+	display: block;
+	width: 100%;
+	height: auto;
+	z-index: 0;
 }
 
 .dlnmtext {
-  z-index: 1;
-  padding: 1rem;
-  text-align: left;
+	z-index: 1;
+	padding: 1rem;
+	text-align: left;
 }
 
 .cf-container {
-  display: grid;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(10, minmax(20px, auto));
-  padding: 30px;
-  border-radius: 8px;
+	display: grid;
+	width: 100%;
+	margin: 0;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(10, minmax(20px, auto));
+	padding: 30px;
+	border-radius: 8px;
 }
 
 .deelnemen-twee {
-  z-index: -10;
-  grid-column: 1 / 13;
-  grid-row: 1 / 11;
+	z-index: -10;
+	grid-column: 1 / 13;
+	grid-row: 1 / 11;
 }
 
 .deelnemen-twee img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .cf-stepper {
-  grid-column: 4 / 10;
-  grid-row: 2 / 3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	grid-column: 4 / 10;
+	grid-row: 2 / 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 #cf-form {
-  grid-column: 4 / 10;
-  grid-row: 4 / 8;
+	grid-column: 4 / 10;
+	grid-row: 4 / 8;
 }
 
 .cf-form-step {
-  display: none;
+	display: none;
 }
 
 .cf-form-step.active {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-row-gap: 20px;
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row-gap: 20px;
 }
 
 .cf-form-step label {
-  display: block;
-  margin-bottom: 4px;
+	display: block;
+	margin-bottom: 4px;
 }
 
 .cf-form-step input {
-  width: 100%;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
+	width: 100%;
+	padding: 8px 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
 }
 
 .cf-step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	position: relative;
 }
 
 .cf-step:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: -50%;
-  width: 100%;
-  height: 2px;
-  background: #ccc;
-  z-index: -1;
+	content: "";
+	position: absolute;
+	top: 12px;
+	right: -50%;
+	width: 100%;
+	height: 2px;
+	background: #ccc;
+	z-index: -1;
 }
 
 .cf-circle {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #ccc;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 6px;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: #ccc;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 6px;
 }
 
 .cf-step.active .cf-circle {
-  background: #5dbeb0;
+	background: #5dbeb0;
 }
 
 .cf-step-label {
-  font-size: 0.85rem;
-  color: #666;
+	font-size: 0.85rem;
+	color: #666;
 }
 
 .cf-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
 .cf-buttons button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
 }
 
 .cf-prev-btn {
-  background: #eee;
+	background: #eee;
 }
 
 .cf-next-btn {
-  background: #f48fb1;
-  color: white;
+	background: #f48fb1;
+	color: white;
 }
 
 .deelnemen-stats {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(14, 1fr);
-  grid-template-rows: repeat(5, minmax(20px, auto));
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(14, 1fr);
+	grid-template-rows: repeat(5, minmax(20px, auto));
 }
 
 .stats-rinkelaarsback {
-  grid-column: 2 / 7;
-  grid-row: 2 / 6;
+	grid-column: 2 / 7;
+	grid-row: 2 / 6;
 }
 
 .stats-rinkelaarsback img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .stats-number {
-  grid-column: 3 / 6;
-  grid-row: 3 / 4;
-  letter-spacing: 5px;
-  text-align: center;
+	grid-column: 3 / 6;
+	grid-row: 3 / 4;
+	letter-spacing: 5px;
+	text-align: center;
 }
 
 .stats-subtitle {
-  grid-column: 8 / 14;
-  grid-row: 3 / 4;
-  display: flex;
-  align-items: center;
+	grid-column: 8 / 14;
+	grid-row: 3 / 4;
+	display: flex;
+	align-items: center;
 }
 
 .deelnemen-stats {
-  margin: 3rem 0;
-  font-weight: bold;
+	margin: 3rem 0;
+	font-weight: bold;
 }
 
 .stats-number {
-  font-size: 4rem;
+	font-size: 4rem;
 }
 
 .deelnemen-stats .stats-subtitle {
-  font-size: 1.4rem;
+	font-size: 1.4rem;
 }
 
 .deelnemen-map-search {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(17, minmax(40px, auto));
-  text-align: right;
-  border-radius: 15px;
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(17, minmax(40px, auto));
+	text-align: right;
+	border-radius: 15px;
 }
 
 .deelnemen-map-search .maptext {
-  grid-column: 3/7;
-  grid-row: 1/2;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  text-align: left;
+	grid-column: 3/7;
+	grid-row: 1/2;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	text-align: left;
 }
 
 .deelnemen-map-search .search-bar {
-  grid-column: 9/11;
-  grid-row: 1/2;
+	grid-column: 9/11;
+	grid-row: 1/2;
 }
 
 .deelnemen-map-search .map {
-  grid-column: 3/11;
-  grid-row: 2/12;
-  border-radius: 18px;
-  overflow: hidden;
-  background-color: #d1d1d1;
-  border: solid;
+	grid-column: 3/11;
+	grid-row: 2/12;
+	border-radius: 18px;
+	overflow: hidden;
+	background-color: #d1d1d1;
+	border: solid;
 }
 
 .deelnemen-map-search .topright {
-  grid-column: 7/12;
-  grid-row: 1/13;
-  z-index: -10;
+	grid-column: 7/12;
+	grid-row: 1/13;
+	z-index: -10;
 }
 
 .deelnemen-map-search .topright img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .deelnemen-map-search .bottomright {
-  grid-column: 7/12;
-  grid-row: 7/18;
-  z-index: -10;
+	grid-column: 7/12;
+	grid-row: 7/18;
+	z-index: -10;
 }
 
 .deelnemen-map-search .bottomright img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
 .deelnemen-map-search .bottomleft {
-  grid-column: 2/6;
-  grid-row: 4/18;
-  z-index: -10;
+	grid-column: 2/6;
+	grid-row: 4/18;
+	z-index: -10;
 }
 
 .deelnemen-map-search .bottomleft img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 
-.deelnemen-map-search h2{
+.deelnemen-map-search h2 {
 	color: white;
-  text-decoration: underline;
-  cursor: pointer;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .oost-vlaanderen {
-  grid-column: 4/5;
-  grid-row: 5/7;
-  z-index: 200;
-  text-align: left;
-  display: flex;
-  align-items: center;
+	grid-column: 4/5;
+	grid-row: 5/7;
+	z-index: 200;
+	text-align: left;
+	display: flex;
+	align-items: center;
 }
 
 .west-vlaanderen {
-  grid-column: 5/6;
-  grid-row: 6/7;
-  z-index: 200;
-  text-align: right;
-  align-self: top;
+	grid-column: 5/6;
+	grid-row: 6/7;
+	z-index: 200;
+	text-align: right;
+	align-self: top;
 }
 
 .vlaams-brabant {
-  grid-column: 7/8;
-  grid-row: 7/8;
-  z-index: 200;
-  text-align: center;
-  align-self: top;
+	grid-column: 7/8;
+	grid-row: 7/8;
+	z-index: 200;
+	text-align: center;
+	align-self: top;
 }
 
 .brussel {
-  grid-column: 6/7;
-  grid-row: 7/8;
-  z-index: 200;
-  text-align: right;
-  align-self: last baseline;
+	grid-column: 6/7;
+	grid-row: 7/8;
+	z-index: 200;
+	text-align: right;
+	align-self: last baseline;
 }
 
 .antwerpen {
-  grid-column: 7/8;
-  grid-row: 4/5;
-  z-index: 200;
-  text-align: center;
-  align-self: center;
+	grid-column: 7/8;
+	grid-row: 4/5;
+	z-index: 200;
+	text-align: center;
+	align-self: center;
 }
 
 .limburg {
-  grid-column: 8/9;
-  grid-row: 6/7;
-  z-index: 200;
+	grid-column: 8/9;
+	grid-row: 6/7;
+	z-index: 200;
 }
 
 .deelnemen-map-search .legendemap {
-  grid-column: 11/12;
-  grid-row: 2/4;
-  text-align: center;
+	grid-column: 11/12;
+	grid-row: 2/4;
+	text-align: center;
 }
 
 .deelnemen-map-search .legendemap-twee {
-  grid-column: 11/13;
-  grid-row: 4/12;
-  line-height: 25px;
-  text-align: left;
+	grid-column: 11/13;
+	grid-row: 4/12;
+	line-height: 25px;
+	text-align: left;
 }
-
-
 
 .legend {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 .legend li {
-  position: relative;
-  padding-left: 1.5em;
-  margin-bottom: .5em;
-  color: #333;
+	position: relative;
+	padding-left: 1.5em;
+	margin-bottom: 0.5em;
+	color: #333;
 }
 .legend li::before {
-  content: "";
-  position: absolute;
-  left: 0; top: .1em;
-  width: 1em; height: 1em;
-  border-radius: 50%;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.1em;
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
 }
-.legend li:nth-child(1)::before { background: #051928; }
-.legend li:nth-child(2)::before { background: #042639; }
-.legend li:nth-child(3)::before { background: #16499B; }
-.legend li:nth-child(4)::before { background: #008DFF; }
-.legend li:nth-child(5)::before { background: #3FC2F2; }
-.legend li:nth-child(6)::before { background: #80D3FF; }
-.legend li:nth-child(7)::before { background: #CDEBFF; }
-
+.legend li:nth-child(1)::before {
+	background: #051928;
+}
+.legend li:nth-child(2)::before {
+	background: #042639;
+}
+.legend li:nth-child(3)::before {
+	background: #16499b;
+}
+.legend li:nth-child(4)::before {
+	background: #008dff;
+}
+.legend li:nth-child(5)::before {
+	background: #3fc2f2;
+}
+.legend li:nth-child(6)::before {
+	background: #80d3ff;
+}
+.legend li:nth-child(7)::before {
+	background: #cdebff;
+}
 
 .deelnemen-map-search .maptext p {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .deelnemen-map-search .maptext h2 {
-  font-size: 3rem;
-  color: #000;
-  text-decoration: none;
+	font-size: 3rem;
+	color: #000;
+	text-decoration: none;
 }
 
 .deelnemen-map-search .map img {
-  display: block;
-  width: 100%;
-  height: auto;
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .deelnemen-map-search .search-bar input {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  border: solid;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px;
+	border: solid;
 }
 
 .deelnemen-form {
-  margin: 0 auto 4rem;
-  text-align: left;
+	margin: 0 auto 4rem;
+	text-align: left;
 }
 
 .deelnemen-form p {
-  text-align: center;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+	text-align: center;
+	font-size: 0.9rem;
+	margin-bottom: 1.5rem;
 }
 
 .deelnemen-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .deelnemen-form label {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .deelnemen-form input,
 .deelnemen-form textarea {
-  padding: 0.5rem;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  font-size: 1rem;
+	padding: 0.5rem;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	font-size: 1rem;
 }
 
 .deelnemen-form textarea {
-  min-height: 100px;
-  resize: vertical;
+	min-height: 100px;
+	resize: vertical;
 }
 
 .deelnemen-form button {
-  align-self: flex-end;
-  width: 120px;
-  height: 45px;
+	align-self: flex-end;
+	width: 120px;
+	height: 45px;
 }
 
 .filter-buttons,
 .subfilter-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin: 2rem auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin: 2rem auto;
 }
 
 .activiteiten-lijst {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(80, minmax(40px, auto));
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(80, minmax(40px, auto));
 }
 
 .introtext-activiteiten {
-  grid-column: 2/7;
-  grid-row: 2/3;
-  font-weight: bold;
+	grid-column: 2/7;
+	grid-row: 2/3;
+	font-weight: bold;
 }
 
 .activiteiten-lijst .kaart-foto1 {
-  grid-column: 5/9;
-  grid-row: 5/10;
+	grid-column: 5/9;
+	grid-row: 5/10;
 }
-.activiteiten-lijst .kaart-foto1 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto1 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info1 {
-  grid-column: 5/9;
-  grid-row: 6/11;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 6/11;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button1 {
-  grid-column: 5/7;
-  grid-row: 9/10;
+	grid-column: 5/7;
+	grid-row: 9/10;
 }
-
-
 
 .activiteiten-lijst .kaart-foto2 {
-  grid-column: 5/9;
-  grid-row: 12/20;
+	grid-column: 5/9;
+	grid-row: 12/20;
 }
-.activiteiten-lijst .kaart-foto2 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto2 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info2 {
-  grid-column: 5/9;
-  grid-row: 14/18;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 14/18;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button2 {
-  grid-column: 5/7;
-  grid-row: 17/18;
+	grid-column: 5/7;
+	grid-row: 17/18;
 }
-
-
 
 .activiteiten-lijst .kaart-foto3 {
-  grid-column: 5/9;
-  grid-row: 22/30;
+	grid-column: 5/9;
+	grid-row: 22/30;
 }
-.activiteiten-lijst .kaart-foto3 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto3 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info3 {
-  grid-column: 5/9;
-  grid-row: 24/26;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 24/26;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button3 {
-  grid-column: 5/7;
-  grid-row: 27/28;
+	grid-column: 5/7;
+	grid-row: 27/28;
 }
-
-
 
 .activiteiten-lijst .kaart-foto4 {
-  grid-column: 5/9;
-  grid-row: 32/40;
+	grid-column: 5/9;
+	grid-row: 32/40;
 }
-.activiteiten-lijst .kaart-foto4 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto4 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info4 {
-  grid-column: 5/9;
-  grid-row: 36/38;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 36/38;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button4 {
-  grid-column: 5/7;
-  grid-row: 38/39;
+	grid-column: 5/7;
+	grid-row: 38/39;
 }
-
-
 
 .activiteiten-lijst .kaart-foto5 {
-  grid-column: 5/9;
-  grid-row: 42/50;
+	grid-column: 5/9;
+	grid-row: 42/50;
 }
-.activiteiten-lijst .kaart-foto5 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto5 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info5 {
-  grid-column: 5/9;
-  grid-row: 44/48;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 44/48;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button5 {
-  grid-column: 5/7;
-  grid-row: 47/48;
+	grid-column: 5/7;
+	grid-row: 47/48;
 }
-
-
 
 .activiteiten-lijst .kaart-foto6 {
-  grid-column: 5/9;
-  grid-row: 52/60;
+	grid-column: 5/9;
+	grid-row: 52/60;
 }
-.activiteiten-lijst .kaart-foto6 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto6 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info6 {
-  grid-column: 5/9;
-  grid-row: 53/55;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 53/55;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button6 {
-  grid-column: 5/7;
-  grid-row: 56/57;
+	grid-column: 5/7;
+	grid-row: 56/57;
 }
-
-
 
 .activiteiten-lijst .kaart-foto7 {
-  grid-column: 5/9;
-  grid-row: 60/68;
+	grid-column: 5/9;
+	grid-row: 60/68;
 }
-.activiteiten-lijst .kaart-foto7 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto7 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info7 {
-  grid-column: 5/9;
-  grid-row: 63/65;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 63/65;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button7 {
-  grid-column: 5/7;
-  grid-row: 66/67;
+	grid-column: 5/7;
+	grid-row: 66/67;
 }
-
-
 
 .activiteiten-lijst .kaart-foto8 {
-  grid-column: 5/9;
-  grid-row: 70/79;
+	grid-column: 5/9;
+	grid-row: 70/79;
 }
-.activiteiten-lijst .kaart-foto8 img{
-  width: 100%;
-  height: auto;
+.activiteiten-lijst .kaart-foto8 img {
+	width: 100%;
+	height: auto;
 }
 .activiteiten-lijst .kaart-info8 {
-  grid-column: 5/9;
-  grid-row: 74/76;
-  line-height: 30px;
+	grid-column: 5/9;
+	grid-row: 74/76;
+	line-height: 30px;
 }
 .activiteiten-lijst .kaart-button8 {
-  grid-column: 5/7;
-  grid-row: 76/77;
+	grid-column: 5/7;
+	grid-row: 76/77;
 }
-
-
-
 
 /* kaart popup*/
 
 /* The Modal (background) */
 .modal {
-  display: none;            /* Hidden by default */
-  position: fixed;          /* Sit on top */
-  z-index: 1000;            /* Above everything */
-  left: 0;
-  top: 0;
-  width: 100%;              /* Full width */
-  height: 100%;             /* Full height */
-  overflow: auto;           /* Enable scroll if needed */
-  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+	display: none; /* Hidden by default */
+	position: fixed; /* Sit on top */
+	z-index: 1000; /* Above everything */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
 }
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;         /* 10% from top, centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;               /* Could be more or less */
-  max-width: 500px;
-  border-radius: 8px;
-  position: relative;
+	background-color: #fefefe;
+	margin: 10% auto; /* 10% from top, centered */
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less */
+	max-width: 500px;
+	border-radius: 8px;
+	position: relative;
 }
 
 /* The Close Button */
 .modal-content .close {
-  color: #aaa;
-  position: absolute;
-  top: 10px;
-  right: 16px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+	color: #aaa;
+	position: absolute;
+	top: 10px;
+	right: 16px;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
 }
 .modal-content .close:hover,
 .modal-content .close:focus {
-  color: #000;
+	color: #000;
 }
-
 
 #provinceModal .search-bar {
-  display: flex;
-  gap: 0.5rem;
+	display: flex;
+	gap: 0.5rem;
 }
 #provinceModal .search-bar input {
-  flex: 1;
-  padding: 0.5rem 1rem;
-  border: 1px solid #444;
-  border-radius: 4px;
-  font-size: 1rem;
+	flex: 1;
+	padding: 0.5rem 1rem;
+	border: 1px solid #444;
+	border-radius: 4px;
+	font-size: 1rem;
 }
