@@ -12,7 +12,6 @@ header {
   background-position: left bottom;
 }
 
-
 .logo img {
   height: auto;
   width: 100%;
@@ -30,8 +29,6 @@ nav {
   display: block;
 }
 
-
-
 nav ul {
   display: flex;
   gap: 2rem;
@@ -39,9 +36,7 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-
 }
-
 
 nav ul li {
   position: relative;
@@ -53,7 +48,6 @@ nav ul li {
 
 .dropdown-toggle {
   cursor: pointer;
-
 }
 
 #toggler,
@@ -67,16 +61,15 @@ nav ul li {
   top: 100%;
   left: 0;
   background: #fafafa;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav-item {
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;  
+  border-radius: 0.25rem;
   transition: background 0.2s;
 }
-
 
 nav li:hover > .dropdown-menu {
   display: block;
@@ -100,8 +93,8 @@ nav li:hover > .dropdown-menu {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
-  background: #F1BFBE;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #f1bfbe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 0.5rem 0;
   z-index: 100;
