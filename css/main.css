@@ -1060,6 +1060,11 @@ body {
 		background-size: contain;
 		background-position: center;
 	}
+	.activiteitenblok {
+		padding: 2rem 1rem;
+		background-size: contain;
+		background-position: center;
+	}
 
 	.deelnemen-stats .stats-number {
 		font-size: 2.5rem;
