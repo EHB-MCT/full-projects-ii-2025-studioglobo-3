@@ -533,3 +533,9 @@ button:hover {
 	grid-column: 3/7;
 	text-align: center;
 }
+@media (max-width: 480px) {
+	.samenwerkenpagina {
+		display: flex;
+		flex-direction: column;
+	}
+}
