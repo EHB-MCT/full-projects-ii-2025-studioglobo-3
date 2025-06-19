@@ -211,7 +211,6 @@ body {
 	margin: 0;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(10, minmax(20px, auto));
-	padding: 30px;
 	border-radius: 8px;
 }
 
@@ -1322,6 +1321,99 @@ body {
 .activiteiten-lijst .kaart-button8 {
 	grid-column: 4/7;
 	grid-row: 54/56;
+}
+
+
+/*deelnemen*/
+
+.deelnemen-map-search {
+	display: none;
+}
+
+.deelnemen-een {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(7, minmax(25px, auto));
+	place-items: center;
+	width: 100%;
+	position: relative;
+}
+
+.dlnmtext {
+	grid-column: 2 / 12;
+	grid-row: 2 / 7;
+}
+.dlnmtext h2 {
+	line-height: 50px;
+}
+.dlnmtext p {
+	line-height: 30px;
+}
+
+.dlnmimg {
+	grid-column: 2 / 12;
+	grid-row: 2 / 7;
+}
+
+
+.cf-container {
+	display: grid;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(10, minmax(20px, auto));
+	border-radius: 8px;
+}
+
+.deelnemen-twee {
+	z-index: -10;
+	grid-column: 1 / 13;
+	grid-row: 1 / 11;
+}
+
+.deelnemen-twee img {
+  width: 100%;
+  height: 100%;
+}
+
+.cf-stepper {
+	grid-column: 4 / 10;
+	grid-row: 2 / 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#cf-form {
+	grid-column: 4 / 10;
+	grid-row: 4 / 8;
+}
+
+.deelnemen-stats {
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(14, 1fr);
+	grid-template-rows: repeat(10, minmax(20px, auto));
+}
+
+.stats-rinkelaarsback {
+	grid-column: 2 / 13;
+	grid-row: 1 / 8;
+}
+
+.stats-number {
+	grid-column: 4 / 9;
+	grid-row: 3 / 5;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.stats-subtitle {
+	grid-column: 3 / 8;
+	grid-row: 7 / 9;
+	display: flex;
+	align-items: center;
 }
 
 
