@@ -405,7 +405,7 @@ button:hover {
 /* samenwerken*/
 .samenwerkenpagina {
 	display: grid;
-	margin: 0 64;
+	margin: 0 64px;
 
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: repeat(25, minmax(50px, auto));
@@ -532,10 +532,4 @@ button:hover {
 	grid-row: 24/25;
 	grid-column: 3/7;
 	text-align: center;
-}
-@media (max-width: 480px) {
-	.samenwerkenpagina {
-		display: flex;
-		flex-direction: column;
-	}
 }

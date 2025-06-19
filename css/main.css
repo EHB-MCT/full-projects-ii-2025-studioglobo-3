@@ -238,6 +238,23 @@ body {
 		display: flex;
 		flex-direction: column;
 	}
+	.samenwerkenpagina {
+		display: flex;
+		flex-direction: column;
+	}
+	.wrapper-3 {
+		display: flex;
+		flex-direction: column;
+	}
+	.vorm1-faq {
+		display: none;
+	}
+	.vorm2-faq {
+		display: none;
+	}
+	.contact-vorm {
+		display: none;
+	}
 }
 
 .site-footer {
@@ -387,7 +404,17 @@ body {
 	background-size: contain;
 	background-position: center;
 }
-
+.faqblok {
+	position: relative;
+	max-width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 50px;
+	background-image: url(../images/faqblok.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
 .deelnemen-een {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);

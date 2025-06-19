@@ -80,11 +80,12 @@ button.active {
 }
 .faq {
 	grid-row: 9/12;
-	grid-column: 2/12;
+	grid-column: 2/11;
 }
 .faq p {
 	margin-bottom: 20px;
 }
+
 .faq-item {
 	border-bottom: 1px solid #ccc;
 	padding: 1rem 0;
@@ -108,7 +109,7 @@ button.active {
 }
 .faq-answer button {
 	margin-left: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 .faq-item.active .faq-answer {
