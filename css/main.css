@@ -631,7 +631,7 @@ body {
 
 .deelnemen-map-search .bottomright {
   grid-column: 7/12;
-  grid-row: 10/17;
+  grid-row: 10/18;
   z-index: -10;
 }
 
@@ -652,13 +652,15 @@ body {
 }
 
 .deelnemen-map-search .legendemap {
-  grid-column: 3/4;
-  grid-row: 15/16;
+  grid-column: 3/6;
+  grid-row: 13/14;
+  text-align: center;
 }
 
 .deelnemen-map-search .legendemap-twee {
   grid-column: 3/4;
-  grid-row: 17/20;
+  grid-row: 14/19;
+  line-height: 25px;
 }
 
 
