@@ -7,7 +7,9 @@
 	gap: 2rem;
 	position: relative;
 }
-
+.tekstonderb {
+	padding-top: 3%;
+}
 .materiaal-foto {
 	width: 80%;
 }
@@ -15,6 +17,7 @@
 .button-materiaal {
 	font-size: 14px;
 	margin-top: 2%;
+	font-weight: bold;
 }
 .tweetekst {
 	margin-bottom: 2%;
