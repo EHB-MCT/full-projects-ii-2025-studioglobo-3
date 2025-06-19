@@ -524,3 +524,12 @@ button:hover {
 .samen-sponsor4 {
 	grid-column: 7/9;
 }
+.registreer-vorm {
+	grid-column: 2/8;
+	grid-row: 24/25;
+}
+.registreer {
+	grid-row: 24/25;
+	grid-column: 3/7;
+	text-align: center;
+}
