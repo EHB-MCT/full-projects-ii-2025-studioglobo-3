@@ -1,170 +1,239 @@
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('nav');
+document.addEventListener('DOMContentLoaded', function() {
+  //
+  // 1) NAV TOGGLE & DROPDOWNS
+  //
+  var navToggle = document.querySelector('.nav-toggle');
+  var nav       = document.querySelector('nav');
 
-if (navToggle && nav) {
-  navToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-
-  document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      toggle.nextElementSibling.classList.toggle('open');
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
     });
-  });
-}
 
-
-let selectedLevel = null;
-let selectedType = null;
-
-const levelButtons = document.querySelectorAll(".filter-buttons button");
-const typeButtons = document.querySelectorAll(".subfilter-buttons button");
-const kaarten = document.querySelectorAll(".card");
-
-for (var i = 0; i < levelButtons.length; i++) {
-  levelButtons[i].addEventListener("click", function () {
-    selectedLevel = this.className;
-    setActive(levelButtons, this);
-    updateFilters();
-  });
-}
-
-for (var i = 0; i < typeButtons.length; i++) {
-  typeButtons[i].addEventListener("click", function () {
-    selectedType = this.className;
-    setActive(typeButtons, this);
-    updateFilters();
-  });
-}
-
-function updateFilters() {
-  for (var i = 0; i < kaarten.length; i++) {
-    var kaart = kaarten[i];
-    var matchLevel = selectedLevel ? kaart.classList.contains(selectedLevel) : true;
-    var matchType = selectedType ? kaart.classList.contains(selectedType) : true;
-
-    kaart.style.display = (matchLevel && matchType) ? "block" : "none";
-  }
-}
-
-function setActive(buttons, selected) {
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove("active");
-  }
-  selected.classList.add("active");
-}
-
-
-//deelnemen
-let cfCurrent = 1;
-const cfTotal = 3;
-const cfForm = document.getElementById('cf-form');
-const cfPrev = cfForm.querySelector('.cf-prev-btn');
-const cfNext = cfForm.querySelector('.cf-next-btn');
-const cfSteps = [...document.querySelectorAll('.cf-form-step')];
-const cfCircles = [...document.querySelectorAll('.cf-step')];
-
-function cfUpdate() {
-  cfCircles.forEach(c => {
-    c.classList.toggle('active', +c.dataset.step === cfCurrent);
-  });
-  cfSteps.forEach(f => {
-    f.classList.toggle('active', +f.dataset.step === cfCurrent);
-  });
-  cfPrev.disabled = cfCurrent === 1;
-  cfNext.textContent = cfCurrent === cfTotal ? 'Verzenden' : 'Volgende';
-}
-
-function cfChangeStep(dir) {
-  if (cfCurrent === cfTotal && dir === 1) {
-    cfForm.submit();
-    return;
-  }
-  cfCurrent = Math.max(1, Math.min(cfTotal, cfCurrent + dir));
-  cfUpdate();
-}
-
-cfUpdate();
-
-
-
-// API
-
-document.addEventListener('DOMContentLoaded', () => {
-  // 1) grab modal elements
-  const modal      = document.getElementById('provinceModal');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalBody  = document.getElementById('modalBody');
-  const spanClose  = modal.querySelector('.close');
-
-  // 2) fetch your schools API
-  let schools = [];
-  fetch('../js/api.json')
-    .then(r => r.json())
-    .then(data => {
-      schools = data.items || [];
-
-      // 3) only after schools are loaded, attach click‐handlers
-      document.querySelectorAll('.kaartpopup').forEach(div => {
-        div.addEventListener('click', () => openProvinceModal(div));
+    var ddToggles = document.querySelectorAll('.dropdown-toggle');
+    for (var i = 0; i < ddToggles.length; i++) {
+      ddToggles[i].addEventListener('click', function() {
+        var menu = this.nextElementSibling;
+        if (menu) {
+          menu.classList.toggle('open');
+        }
       });
-    })
-    .catch(err => console.error('Failed to load schools:', err));
+    }
+  }
 
-  // 4) function to build & show the modal for one province
-  function openProvinceModal(div) {
-    const name  = div.dataset.provincienaam;
-    const count = div.querySelector('h2').innerText;
+  //
+  // 2) SCHOOL‐CARD FILTERS
+  //
+  var selectedLevel = null;
+  var selectedType  = null;
+  var levelButtons  = document.querySelectorAll('.filter-buttons button');
+  var typeButtons   = document.querySelectorAll('.subfilter-buttons button');
+  var kaarten       = document.querySelectorAll('.card');
 
-    // filter schools in this province
-    const inProv = schools.filter(s => s.province === name);
+  function updateFilters() {
+    for (var k = 0; k < kaarten.length; k++) {
+      var kaart      = kaarten[k];
+      var matchLevel = selectedLevel ? kaart.classList.contains(selectedLevel) : true;
+      var matchType  = selectedType  ? kaart.classList.contains(selectedType)  : true;
+      kaart.style.display = (matchLevel && matchType) ? 'block' : 'none';
+    }
+  }
 
-    // build datalist options
-    const options = inProv
-      .map(s => `<option value="${s.name}">`)
-      .join('');
+  function setActive(buttons, selected) {
+    for (var m = 0; m < buttons.length; m++) {
+      buttons[m].classList.remove('active');
+    }
+    selected.classList.add('active');
+  }
 
-    // inject the search-bar + result container
-    modalTitle.innerText = `${name} (${count} scholen)`;
-    modalBody.innerHTML = `
-      <div class="search-bar">
-        <input 
-          type="text"
-          id="modalSearch"
-          list="modalDatalist"
-          placeholder="Zoek op scholen in ${name}…"
-        >
-        <datalist id="modalDatalist">
-          ${options}
-        </datalist>
-      </div>
-      <div id="searchResult" style="margin-top:1rem;"></div>
-    `;
+  for (var i = 0; i < levelButtons.length; i++) {
+    (function(btn) {
+      btn.addEventListener('click', function() {
+        selectedLevel = this.className;
+        setActive(levelButtons, this);
+        updateFilters();
+      });
+    })(levelButtons[i]);
+  }
 
-    // hook up the input → result
-    const input  = document.getElementById('modalSearch');
-    const result = document.getElementById('searchResult');
-    input.addEventListener('input', () => {
-      const val    = input.value;
-      const school = inProv.find(s => s.name === val);
-      if (!school) {
-        result.innerHTML = '';
+  for (var j = 0; j < typeButtons.length; j++) {
+    (function(btn) {
+      btn.addEventListener('click', function() {
+        selectedType = this.className;
+        setActive(typeButtons, this);
+        updateFilters();
+      });
+    })(typeButtons[j]);
+  }
+
+  //
+  // 3) MULTI‐STEP FORM (only if #cf-form exists)
+  //
+  var cfForm = document.getElementById('cf-form');
+  if (cfForm) {
+    var cfCurrent = 1;
+    var cfTotal   = 3;
+    var cfPrev    = cfForm.querySelector('.cf-prev-btn');
+    var cfNext    = cfForm.querySelector('.cf-next-btn');
+    var cfSteps   = document.querySelectorAll('.cf-form-step');
+    var cfCircles = document.querySelectorAll('.cf-step');
+
+    function cfUpdate() {
+      for (var x = 0; x < cfCircles.length; x++) {
+        var circle = cfCircles[x];
+        circle.classList.toggle('active', Number(circle.dataset.step) === cfCurrent);
+      }
+      for (var y = 0; y < cfSteps.length; y++) {
+        var step = cfSteps[y];
+        step.classList.toggle('active', Number(step.dataset.step) === cfCurrent);
+      }
+      cfPrev.disabled    = (cfCurrent === 1);
+      cfNext.textContent = (cfCurrent === cfTotal) ? 'Verzenden' : 'Volgende';
+    }
+
+    function cfChangeStep(dir) {
+      if (cfCurrent === cfTotal && dir === 1) {
+        cfForm.submit();
         return;
       }
-      result.innerHTML = `
-        <h3>${school.name}</h3>
-        <p>${school.address}</p>
-        <p>${school.num_students} leerlingen</p>
-      `;
-    });
+      cfCurrent = Math.max(1, Math.min(cfTotal, cfCurrent + dir));
+      cfUpdate();
+    }
 
-    // show modal
-    modal.style.display = 'block';
+    cfPrev.addEventListener('click', function() { cfChangeStep(-1); });
+    cfNext.addEventListener('click', function() { cfChangeStep(1); });
+    cfUpdate();
   }
 
-  // 5) close‐modal handlers
-  spanClose.addEventListener('click', () => modal.style.display = 'none');
-  window.addEventListener('click', e => {
-    if (e.target === modal) modal.style.display = 'none';
-  });
+  //
+  // 4) PROVINCE‐SEARCH MODAL (only if #provinceModal exists)
+  //
+  var provinceModal = document.getElementById('provinceModal');
+  if (provinceModal) {
+    var modalTitle = document.getElementById('modalTitle');
+    var modalBody  = document.getElementById('modalBody');
+    var spanClose  = provinceModal.querySelector('.close');
+    var schools    = [];
+
+    // Fetch schools and then bind click‐handlers
+    fetch('../js/api.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        schools = data.items || [];
+        var pops = document.querySelectorAll('.kaartpopup');
+        for (var i = 0; i < pops.length; i++) {
+          (function(div) {
+            div.addEventListener('click', function() {
+              openProvinceModal(div);
+            });
+          })(pops[i]);
+        }
+      })
+      .catch(function(err) {
+        console.error('Failed to load schools:', err);
+      });
+
+    function openProvinceModal(div) {
+      var name  = div.dataset.provincienaam;
+      var count = div.querySelector('h2').innerText;
+
+      // filter schools
+      var inProv = [];
+      for (var i = 0; i < schools.length; i++) {
+        if (schools[i].province === name) {
+          inProv.push(schools[i]);
+        }
+      }
+
+      // build <option>s
+      var options = '';
+      for (var i = 0; i < inProv.length; i++) {
+        options += '<option value="' + inProv[i].name + '">';
+      }
+
+      // inject header + searchbar
+      modalTitle.innerText = name + ' (' + count + ' scholen)';
+      modalBody.innerHTML  =
+        '<div class="search-bar">' +
+          '<input type="text" id="modalSearch" list="modalDatalist" ' +
+                  'placeholder="Zoek op scholen in ' + name + '…">' +
+          '<datalist id="modalDatalist">' + options + '</datalist>' +
+        '</div>' +
+        '<div id="searchResult" style="margin-top:1rem;"></div>';
+
+      // hookup autocomplete → details
+      var input  = document.getElementById('modalSearch');
+      var result = document.getElementById('searchResult');
+      input.addEventListener('input', function() {
+        var val = this.value, found = null;
+        for (var i = 0; i < inProv.length; i++) {
+          if (inProv[i].name === val) {
+            found = inProv[i];
+            break;
+          }
+        }
+        if (!found) {
+          result.innerHTML = '';
+        } else {
+          result.innerHTML =
+            '<h3>' + found.name + '</h3>' +
+            '<p>' + found.address + '</p>' +
+            '<p>' + found.num_students + ' leerlingen</p>';
+        }
+      });
+
+      provinceModal.style.display = 'block';
+    }
+
+    spanClose.addEventListener('click', function() {
+      provinceModal.style.display = 'none';
+    });
+    window.addEventListener('click', function(e) {
+      if (e.target === provinceModal) {
+        provinceModal.style.display = 'none';
+      }
+    });
+  }
+
+  //
+  // 5) READ‐MORE MODAL #1 (only if #readMoreModal exists)
+  //
+  var readModal = document.getElementById('readMoreModal');
+  if (readModal) {
+    var openReadBtn = document.getElementById('openReadMoreBtn');
+    var closeRead   = readModal.querySelector('.close2');
+
+    openReadBtn.addEventListener('click', function() {
+      readModal.style.display = 'block';
+    });
+    closeRead.addEventListener('click', function() {
+      readModal.style.display = 'none';
+    });
+    window.addEventListener('click', function(e) {
+      if (e.target === readModal) {
+        readModal.style.display = 'none';
+      }
+    });
+  }
+
+  //
+  // 6) READ‐MORE MODAL #2 (only if #readMoreModal2 exists)
+  //
+  var readModal2 = document.getElementById('readMoreModal2');
+  if (readModal2) {
+    var openReadBtn2 = document.getElementById('openReadMoreBtn2');
+    var closeRead2   = readModal2.querySelector('.close3');
+
+    openReadBtn2.addEventListener('click', function() {
+      readModal2.style.display = 'block';
+    });
+    closeRead2.addEventListener('click', function() {
+      readModal2.style.display = 'none';
+    });
+    window.addEventListener('click', function(e) {
+      if (e.target === readModal2) {
+        readModal2.style.display = 'none';
+      }
+    });
+  }
 });
