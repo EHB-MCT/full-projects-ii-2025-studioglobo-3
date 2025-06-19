@@ -48,6 +48,7 @@ body {
     background: none;
     border: none;
     font-size: 2rem;
+    box-shadow: none;
   }
 
   .wrapper,
@@ -653,6 +654,7 @@ body {
 .deelnemen-map-search h2{
 	color: white;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .oost-vlaanderen {
@@ -983,4 +985,65 @@ body {
 .activiteiten-lijst .kaart-button8 {
   grid-column: 5/7;
   grid-row: 76/77;
+}
+
+
+
+
+/* kaart popup*/
+
+.kaartpopup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual kaartpopup */
+.kaartpopup .kaartpopuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* kaartPopup arrow */
+.kaartpopup .kaartpopuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the kaartpopup */
+.kaartpopup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the kaartpopup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }
