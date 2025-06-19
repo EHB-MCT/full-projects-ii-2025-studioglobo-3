@@ -5,7 +5,7 @@ if (navToggle && nav) {
   navToggle.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
-  
+
   document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
     toggle.addEventListener('click', () => {
       toggle.nextElementSibling.classList.toggle('open');
@@ -57,36 +57,55 @@ function setActive(buttons, selected) {
 
 //deelnemen
 let cfCurrent = 1;
-    const cfTotal = 3;
-    const cfForm = document.getElementById('cf-form');
-    const cfPrev = cfForm.querySelector('.cf-prev-btn');
-    const cfNext = cfForm.querySelector('.cf-next-btn');
-    const cfSteps = [...document.querySelectorAll('.cf-form-step')];
-    const cfCircles = [...document.querySelectorAll('.cf-step')];
+const cfTotal = 3;
+const cfForm = document.getElementById('cf-form');
+const cfPrev = cfForm.querySelector('.cf-prev-btn');
+const cfNext = cfForm.querySelector('.cf-next-btn');
+const cfSteps = [...document.querySelectorAll('.cf-form-step')];
+const cfCircles = [...document.querySelectorAll('.cf-step')];
 
-    function cfUpdate() {
-      cfCircles.forEach(c => {
-        c.classList.toggle('active', +c.dataset.step === cfCurrent);
-      });
-      cfSteps.forEach(f => {
-        f.classList.toggle('active', +f.dataset.step === cfCurrent);
-      });
-      cfPrev.disabled = cfCurrent === 1;
-      cfNext.textContent = cfCurrent === cfTotal ? 'Verzenden' : 'Volgende';
-    }
+function cfUpdate() {
+  cfCircles.forEach(c => {
+    c.classList.toggle('active', +c.dataset.step === cfCurrent);
+  });
+  cfSteps.forEach(f => {
+    f.classList.toggle('active', +f.dataset.step === cfCurrent);
+  });
+  cfPrev.disabled = cfCurrent === 1;
+  cfNext.textContent = cfCurrent === cfTotal ? 'Verzenden' : 'Volgende';
+}
 
-    function cfChangeStep(dir) {
-      if (cfCurrent === cfTotal && dir === 1) {
-        cfForm.submit();
-        return;
-      }
-      cfCurrent = Math.max(1, Math.min(cfTotal, cfCurrent + dir));
-      cfUpdate();
-    }
+function cfChangeStep(dir) {
+  if (cfCurrent === cfTotal && dir === 1) {
+    cfForm.submit();
+    return;
+  }
+  cfCurrent = Math.max(1, Math.min(cfTotal, cfCurrent + dir));
+  cfUpdate();
+}
 
-    cfUpdate();
+cfUpdate();
 
 
 
 // API
 
+document.addEventListener("DOMContentLoaded", () => {
+  const questions = document.querySelectorAll('.faq-question');
+
+  questions.forEach(question => {
+    question.addEventListener('click', () => {
+      const item = question.parentElement;
+      const answer = item.querySelector('.faq-answer');
+      const content = item.querySelector('.faq-answer-content');
+
+      if (item.classList.contains('active')) {
+        item.classList.remove('active');
+        answer.style.height = '0px';
+      } else {
+        item.classList.add('active');
+        answer.style.height = content.scrollHeight + 'px';
+      }
+    });
+  });
+}); 
