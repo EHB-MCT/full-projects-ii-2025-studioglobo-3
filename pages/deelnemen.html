@@ -145,12 +145,24 @@
 		</section>
 
 		<section class="deelnemen-map-search">
-			<div class="oost-vlaanderen"><a ><h2>500</h2></a></div>
-			<div class="west-vlaanderen"><h2>650</h2></div>
-			<div class="vlaams-brabant"><h2>500</h2></div>
-			<div class="brussel"><h2>500</h2></div>
-			<div class="antwerpen"><h2>750</h2></div>
-			<div class="limburg"><h2>400</h2></div>
+			<div class="oost-vlaanderen kaartpopup" data-provincienaam="Oost-Vlaanderen">
+				<h2>500</h2>
+			</div>
+			<div class="west-vlaanderen kaartpopup" data-provincienaam="West-Vlaanderen">
+				<h2>650</h2>
+			</div>
+			<div class="vlaams-brabant kaartpopup" data-provincienaam="Vlaams-Brabant">
+				<h2>500</h2>
+			</div>
+			<div class="brussel kaartpopup" data-provincienaam="Brussel">
+				<h2>500</h2>
+			</div>
+			<div class="antwerpen kaartpopup" data-provincienaam="Antwerpen">
+				<h2>750</h2>
+			</div>
+			<div class="limburg kaartpopup" data-provincienaam="Limburg">
+				<h2>400</h2>
+			</div>
 			<div class="maptext">
 				<p>Aantal scholen die mee doen</p>
 				<h2>5.165</h2>
@@ -162,7 +174,7 @@
 
 			<div class="map">
 				<img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">
-				
+
 			</div>
 
 			<div class="topright">
@@ -191,7 +203,7 @@
 					<li>100 – 200</li>
 					<li>0 – 100</li>
 				</ul>
-				</div>
+			</div>
 
 		</section>
 
@@ -233,6 +245,13 @@
 				<a href="#">Privacy</a>
 			</div>
 		</footer>
+<div id="provinceModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle">Provincie</h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
 
 		<script src="../js/index.js"></script>
 </body>

@@ -90,3 +90,81 @@ cfUpdate();
 
 // API
 
+document.addEventListener('DOMContentLoaded', () => {
+  // 1) grab modal elements
+  const modal      = document.getElementById('provinceModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalBody  = document.getElementById('modalBody');
+  const spanClose  = modal.querySelector('.close');
+
+  // 2) fetch your schools API
+  let schools = [];
+  fetch('../js/api.json')
+    .then(r => r.json())
+    .then(data => {
+      schools = data.items || [];
+
+      // 3) only after schools are loaded, attach click‐handlers
+      document.querySelectorAll('.kaartpopup').forEach(div => {
+        div.addEventListener('click', () => openProvinceModal(div));
+      });
+    })
+    .catch(err => console.error('Failed to load schools:', err));
+
+  // 4) function to build & show the modal for one province
+  function openProvinceModal(div) {
+    const name  = div.dataset.provincienaam;
+    const count = div.querySelector('h2').innerText;
+
+    // filter schools in this province
+    const inProv = schools.filter(s => s.province === name);
+
+    // build datalist options
+    const options = inProv
+      .map(s => `<option value="${s.name}">`)
+      .join('');
+
+    // inject the search-bar + result container
+    modalTitle.innerText = `${name} (${count} scholen)`;
+    modalBody.innerHTML = `
+      <div class="search-bar">
+        <input 
+          type="text"
+          id="modalSearch"
+          list="modalDatalist"
+          placeholder="Zoek op scholen in ${name}…"
+        >
+        <datalist id="modalDatalist">
+          ${options}
+        </datalist>
+      </div>
+      <div id="searchResult" style="margin-top:1rem;"></div>
+    `;
+
+    // hook up the input → result
+    const input  = document.getElementById('modalSearch');
+    const result = document.getElementById('searchResult');
+    input.addEventListener('input', () => {
+      const val    = input.value;
+      const school = inProv.find(s => s.name === val);
+      if (!school) {
+        result.innerHTML = '';
+        return;
+      }
+      result.innerHTML = `
+        <h3>${school.name}</h3>
+        <p>${school.address}</p>
+        <p>${school.num_students} leerlingen</p>
+      `;
+    });
+
+    // show modal
+    modal.style.display = 'block';
+  }
+
+  // 5) close‐modal handlers
+  spanClose.addEventListener('click', () => modal.style.display = 'none');
+  window.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+});
