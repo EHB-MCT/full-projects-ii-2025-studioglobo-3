@@ -90,22 +90,3 @@ cfUpdate();
 
 // API
 
-document.addEventListener("DOMContentLoaded", () => {
-  const questions = document.querySelectorAll('.faq-question');
-
-  questions.forEach(question => {
-    question.addEventListener('click', () => {
-      const item = question.parentElement;
-      const answer = item.querySelector('.faq-answer');
-      const content = item.querySelector('.faq-answer-content');
-
-      if (item.classList.contains('active')) {
-        item.classList.remove('active');
-        answer.style.height = '0px';
-      } else {
-        item.classList.add('active');
-        answer.style.height = content.scrollHeight + 'px';
-      }
-    });
-  });
-}); 
