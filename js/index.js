@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //
-  // 4) PROVINCE‐SEARCH MODAL (only if #provinceModal exists)
+  // 4) PROVINCE‐SEARCH MODAL
   //
   var provinceModal = document.getElementById('provinceModal');
   if (provinceModal) {
@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var spanClose  = provinceModal.querySelector('.close');
     var schools    = [];
 
-    // Fetch schools and then bind click‐handlers
     fetch('../js/api.json')
       .then(function(r) { return r.json(); })
       .then(function(data) {
@@ -136,8 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function openProvinceModal(div) {
       var name  = div.dataset.provincienaam;
       var count = div.querySelector('h2').innerText;
-
-      // filter schools
       var inProv = [];
       for (var i = 0; i < schools.length; i++) {
         if (schools[i].province === name) {
@@ -145,13 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
-      // build <option>s
       var options = '';
       for (var i = 0; i < inProv.length; i++) {
         options += '<option value="' + inProv[i].name + '">';
       }
 
-      // inject header + searchbar
       modalTitle.innerText = name + ' (' + count + ' scholen)';
       modalBody.innerHTML  =
         '<div class="search-bar">' +
@@ -161,7 +156,6 @@ document.addEventListener('DOMContentLoaded', function() {
         '</div>' +
         '<div id="searchResult" style="margin-top:1rem;"></div>';
 
-      // hookup autocomplete → details
       var input  = document.getElementById('modalSearch');
       var result = document.getElementById('searchResult');
       input.addEventListener('input', function() {
@@ -196,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //
-  // 5) READ‐MORE MODAL #1 (only if #readMoreModal exists)
+  // 5) READ‐MORE MODAL #1
   //
   var readModal = document.getElementById('readMoreModal');
   if (readModal) {
@@ -217,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   //
-  // 6) READ‐MORE MODAL #2 (only if #readMoreModal2 exists)
+  // 6) READ‐MORE MODAL #2
   //
   var readModal2 = document.getElementById('readMoreModal2');
   if (readModal2) {
@@ -236,4 +230,35 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
+
+  //
+  // 7) ACTIVITEITEN MODALS (A–H)
+  //
+  function wireActModal(btnId, modalId, closeClass) {
+    var btn   = document.getElementById(btnId);
+    var modal = document.getElementById(modalId);
+    var close = modal && modal.querySelector(closeClass);
+    if (btn && modal && close) {
+      btn.addEventListener('click', function() {
+        modal.style.display = 'block';
+      });
+      close.addEventListener('click', function() {
+        modal.style.display = 'none';
+      });
+      window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  }
+
+  wireActModal('openNieuwsBtnA','nieuwsModalA','.closeA');
+  wireActModal('openNieuwsBtnB','nieuwsModalB','.closeB');
+  wireActModal('openNieuwsBtnC','nieuwsModalC','.closeC');
+  wireActModal('openNieuwsBtnD','nieuwsModalD','.closeD');
+  wireActModal('openNieuwsBtnE','nieuwsModalE','.closeE');
+  wireActModal('openNieuwsBtnF','nieuwsModalF','.closeF');
+  wireActModal('openNieuwsBtnG','nieuwsModalG','.closeG');
+  wireActModal('openNieuwsBtnH','nieuwsModalH','.closeH');
 });

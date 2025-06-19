@@ -1109,3 +1109,45 @@ body {
 .close3:focus {
   color: #000;
 }
+
+
+
+
+/*activiteiten popups*/
+/* ————————————————————————————————
+   1) Overlay Base (all modals)
+————————————————————————————————— */
+[class^="modal"]:not([class$="-content"]) {
+  display: none;
+  position: fixed;
+  inset: 0;                     /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.5);
+  z-index: var(--modal-z, 2000);/* fallback if you don’t set --modal-z */
+}
+
+/* ————————————————————————————————
+   2) Content Box Base
+————————————————————————————————— */
+[class^="modal"][class$="-content"] {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  max-width: 500px;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* ————————————————————————————————
+   3) Close-Button Base
+————————————————————————————————— */
+[class^="close"] {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 28px;
+  color: #aaa;
+  cursor: pointer;
+}
+[class^="close"]:hover {
+  color: #000;
+}
