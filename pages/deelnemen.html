@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+	<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png" />
+	<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png" />
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Saved by the Bell</title>
+	<link rel="manifest" href="../images/site.webmanifest" />
+	<link href="../css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+	<header>
+		<div>
+			<a href="../index.html" class="logo">
+				<img src="../images/logo sbtb.png" alt="Saved by the bell logo" />
+			</a>
+		</div>
+		<div>
+			<button class="nav-toggle" aria-label="Open menu">☰</button>
+			<nav>
+				<ul>
+					<li><a class="nav-item" href="../index.html">Home</a></li>
+					<li><a class="nav-item" href="aboutus.html">Over ons</a></li>
+					<li><a class="nav-item" href="materiaal.html">Materiaal</a></li>
+					<li><a class="nav-item" href="deelnemen.html">Deelnemen</a></li>
+					<li class="dropdown">
+						<a href="#" class="nav-item dropdown-toggle">Samenwerking ▾</a>
+						<ul class="dropdown-menu">
+							<li><a class="nav-item" href="samenwerken.html">Samenwerken</a></li>
+							<li><a class="nav-item" href="activiteiten.html">Activiteiten</a></li>
+						</ul>
+					</li>
+					<li><a class="nav-item" href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<div class="wrapperdeelnemen">
+		<div class="deelnemenblok blok">
+			<h1>Deelnemen</h1>
+		</div>
+
+		<div class="deelnemen-een">
+			<div class="dlnmtext">
+				<h2>Wil jij ook deelnemen?</h2>
+				<p>Vul het formulier in om mee te doen aan <br>Saved by the bell</p>
+			</div>
+			<div class="dlnmimg"><img src="../images/deelnemen-vorm-1.png"></div>
+		</div>
+		<section class="deelnemen-form">
+
+			<div class="cf-container">
+				<div class="deelnemen-twee"><img src="../images/formback.png"></div>
+
+				<div class="cf-stepper">
+					<div class="cf-step active" data-step="1">
+						<div class="cf-circle">1</div>
+					</div>
+					<div class="cf-step" data-step="2">
+						<div class="cf-circle">2</div>
+					</div>
+					<div class="cf-step" data-step="3">
+						<div class="cf-circle">3</div>
+					</div>
+				</div>
+
+				<form id="cf-form">
+					<fieldset class="cf-form-step active" data-step="1">
+						<div>
+							<label for="cf-name">*Naam en voornaam</label>
+							<input type="text" id="cf-name" name="name" placeholder="Uw naam en voornaam…" required>
+						</div>
+						<div>
+							<label for="cf-phone">*Telefoonnummer</label>
+							<input type="tel" id="cf-phone" name="phone" placeholder="Uw telefoonnummer…" required>
+						</div>
+						<div>
+							<label for="cf-email">*E-mail</label>
+							<input type="email" id="cf-email" name="email" placeholder="Uw E-mail…" required>
+						</div>
+					</fieldset>
+
+					<fieldset class="cf-form-step" data-step="2">
+						<div>
+							<label for="cf-school">*Naam school</label>
+							<input type="text" id="cf-school" name="school" placeholder="Uw school naam…" required>
+						</div>
+						<div>
+							<label for="cf-adres">*Adres</label>
+							<input type="text" id="cf-adres" name="adres"
+								placeholder="Straat van de school, nummer, postcode, gemeente, …" required>
+						</div>
+						<div>
+							<label for="cf-niveau">*Onderwijs niveaus</label>
+							<input type="text" id="cf-niveau" name="niveau"
+								placeholder="Kleuter, Lager, Secundair, Hoger, Buitengewoon, …" required>
+						</div>
+						<div>
+							<label for="cf-netten">*Onderwijs-netten</label>
+							<input type="text" id="cf-netten" name="netten"
+								placeholder="GO!, KOV, OVSG, POV, Vrij (And), …" required>
+						</div>
+						<div>
+							<label for="cf-studenten">*Aantal studenten</label>
+							<input type="text" id="cf-studenten" name="studenten" placeholder="Het Aantal Studenten…"
+								required>
+						</div>
+						<div>
+							<label for="cf-klassen">*Aantal klassen</label>
+							<input type="text" id="cf-klassen" name="klassen" placeholder="Het Aantal Klassen…"
+								required>
+						</div>
+					</fieldset>
+
+					<fieldset class="cf-form-step end" data-step="3">
+						<div>
+							<label for="cf-activiteiten">Activiteiten</label>
+							<input type="text" id="cf-activiteiten" name="activiteiten"
+								placeholder="Wat zijn de activiteiten die jullie (extra) doen tijdens Saved by the bell?">
+						</div>
+						<div>
+							<label for="cf-message">Bericht</label>
+							<input type="text" id="cf-message" name="message"
+								placeholder="Wilt u nog iets achterlaten?">
+						</div>
+					</fieldset>
+
+					<div class="cf-buttons">
+						<button type="button" class="cf-prev-btn" onclick="cfChangeStep(-1)" disabled>Terug</button>
+						<button type="submit" class="cf-next-btn" onclick="cfChangeStep(1)">Volgende</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="deelnemen-stats">
+			<div class="stats-rinkelaarsback"><img src="../images/rinkelaarsback.png"></div>
+			<div class="stats-number">114.514</div>
+			<div class="stats-subtitle">Dit is hoeveel mensen in 2024 mee belden.</div>
+		</section>
+
+		<section class="deelnemen-map-search">
+			<div class="oost-vlaanderen kaartpopup" data-provincienaam="Oost-Vlaanderen">
+				<h2>500</h2>
+			</div>
+			<div class="west-vlaanderen kaartpopup" data-provincienaam="West-Vlaanderen">
+				<h2>650</h2>
+			</div>
+			<div class="vlaams-brabant kaartpopup" data-provincienaam="Vlaams-Brabant">
+				<h2>500</h2>
+			</div>
+			<div class="brussel kaartpopup" data-provincienaam="Brussel">
+				<h2>500</h2>
+			</div>
+			<div class="antwerpen kaartpopup" data-provincienaam="Antwerpen">
+				<h2>750</h2>
+			</div>
+			<div class="limburg kaartpopup" data-provincienaam="Limburg">
+				<h2>400</h2>
+			</div>
+			<div class="maptext">
+				<p>Aantal scholen die mee doen</p>
+				<h2>5.165</h2>
+			</div>
+
+<div class="search-bar">
+  <input 
+    type="text"
+    id="globalSearch"
+    list="schoolDatalist"
+    placeholder="Zoek op scholen…"
+  >
+  <datalist id="schoolDatalist"></datalist>
+</div>
+<div id="globalResults" style="margin-top:1rem;"></div>
+
+			<div class="map">
+				<img src="../images/kaartdeelnemers.png" alt="Kaart van deelnemende regio's">
+
+			</div>
+
+			<div class="topright">
+				<img src="../images/maptopright.png">
+			</div>
+
+			<div class="bottomright">
+				<img src="../images/mapbottomright.png">
+			</div>
+
+			<div class="bottomleft">
+				<img src="../images/mapbottomleft.png">
+			</div>
+
+			<div class="legendemap">
+				<p>Aantal scholen per provincie</p>
+			</div>
+
+			<div class="legendemap-twee">
+				<ul class="legend">
+					<li>700 – 800</li>
+					<li>600 – 700</li>
+					<li>400 – 600</li>
+					<li>300 – 400</li>
+					<li>200 – 300</li>
+					<li>100 – 200</li>
+					<li>0 – 100</li>
+				</ul>
+			</div>
+
+		</section>
+
+		<footer class="site-footer">
+			<div class="footer-content">
+				<div class="footer-col footer-social">
+				<a href="https://www.facebook.com/savedbythebellbe/" target="_blank">
+				<div class="footer-item">
+					<img src="../images/facebook_logo.png" alt="Facebook" class="footer-icon" />
+					<span>Saved by the bell</span>
+				</div>
+				</a>
+				<a href="https://www.facebook.com/studioglobo/?locale=nl_BE" target="_blank">
+				<div class="footer-item">
+					<img src="../images/facebook_logo.png" alt="Facebook" class="footer-icon" />
+					<span>Studio Globo</span>
+				</div>
+				</a>
+				<div class="footer-item">
+					<img src="../images/mail_logo.png" alt="Email" class="footer-icon" />
+					<a href="mailto:info@studioglobo.be">info@studioglobo.be</a>
+				</div>
+				<a href="https://www.instagram.com/studioglobo/" target="_blank">
+				<div class="footer-item">
+					<img src="../images/insta_logo.png" alt="Instagram" class="footer-icon" />
+					<span>Studio Globo</span>
+				</div>
+				</a>
+				<div class="footer-item">
+					<img src="../images/gsm_logo.png" alt="Telefoon" class="footer-icon" />
+					<span>02 520 05 30</span>
+				</div>
+			</div>
+
+			<div class="footer-col footer-org">
+				<p class="footer-org-text">
+					Saved by the bell is een organisatie van :
+				</p>
+				<img src="../images/sglogo.png" alt="Studio Globo logo" class="footer-org-logo" />
+			</div>
+		</div>
+
+			<div class="footer-bottom">
+				© Studio Globo 2025 | <a href="#">Disclaimer</a> |
+				<a href="#">Privacy</a>
+			</div>
+		</footer>
+<div id="provinceModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle">Provincie</h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+		<script src="../js/index.js"></script>
+</body>
+
+</html>
